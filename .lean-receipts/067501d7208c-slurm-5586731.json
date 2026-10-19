@@ -1,0 +1,18 @@
+{
+  "commit": "067501d7208cc9f8bf0706b78b0080ea9b965b54",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "7d6c7341da022729ec4582a55df703034ffecb11671be1bbe6746c5557ef231b",
+  "job_id": "slurm-5586731",
+  "checker": "lean-pkg 0.7.49 template (SRC_MODE=clone, DEPS_TAR) gate: lake build of the library and both Solution modules + serial lake env leanchecker -v over every library and Solution module (checker-loop-ncl) + lake lean #print axioms over all claims.yaml declarations (gen_axioms-ncl); Easley Slurm, glibc-2.35 container, node-local toolchain",
+  "generated_at": "2026-10-19T18:30:39Z",
+  "job_stdout_sha256": "db3c30da48bb6b852c0fdab88edd1afda5319c986ca2de6b1176337b69ebcd85",
+  "manifest_sha256": "b01bd50494f2f857fba128e85332ef07930bedb20605995ada7a9f22e81c418c",
+  "log_commit_bound": true
+}
