@@ -1,0 +1,14 @@
+import NeumannCosine.Discrete.ModalMinimumLimit
+
+/-! Negative control: the modal infimum runs over the modes `n ≥ 1`, not `n ≥ 0`.
+Mutation of `Discrete.ModalMinimumLimit.discreteModalMin_tendsto`: the limit is the infimum over
+all `n ≥ 0`, which includes `f 0` (false e.g. for `f x = x`, `K = 1` and any `L > 0`). Must not compile. -/
+
+open Filter Topology NeumannCosine.Discrete.Eigenvalues NeumannCosine.Discrete.ModalMinimumLimit
+
+example (f : ℝ → ℝ) (K L : ℝ) (hK : 0 < K) (hL : 0 < L)
+    (hf : ∀ x : ℝ, 0 < x → ContinuousAt f x)
+    (hlow : ∀ x : ℝ, 0 < x → K * x ≤ f x) :
+    Tendsto (discreteModalMin f L) atTop
+      (𝓝 (sInf {y : ℝ | ∃ n : ℕ, y = f (neumannEigenvalue L n)})) := by
+  exact discreteModalMin_tendsto f K L hK hL hf hlow

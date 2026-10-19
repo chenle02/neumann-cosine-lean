@@ -1,0 +1,12 @@
+import NeumannCosine.KernelIntegrals
+
+/-! Negative control: the one-cosine/two-sine kernel needs the term `1_{n = k, i = 0}`.
+Mutation of `KernelIntegrals.integral_cos_sin_sin`: that term dropped (at `i = 0`, `n = k = 1`
+the value would be `L/4` instead of `L/2`). Must not compile. -/
+
+open NeumannCosine NeumannCosine.KernelIntegrals
+
+example (L : ℝ) (hL : 0 < L) (i n k : ℕ) (hn : 1 ≤ n) (hk : 1 ≤ k) :
+    (∫ x in (0 : ℝ)..L, mode L i x * sinMode L n x * sinMode L k x) =
+      L / 4 * (indicatorR (i = Int.natAbs ((n : ℤ) - k)) - indicatorR (i = n + k)) := by
+  exact integral_cos_sin_sin L hL i n k hn hk

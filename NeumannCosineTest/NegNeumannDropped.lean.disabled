@@ -1,0 +1,18 @@
+import NeumannCosine.Coefficients
+
+/-! Negative control: the two integrations by parts need the Neumann condition at `L`.
+Mutation of `Coefficients.cosineCoeff_eq_neg_mul_secondDeriv`: the hypothesis `w' L = 0`
+dropped (for `w x = x² / 2` on `[0, 1]` the identity fails). Must not compile. -/
+
+open Set NeumannCosine.Coefficients
+
+example (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
+    (hac : AbsolutelyContinuousOnInterval w 0 L)
+    (hderiv : ∀ x ∈ Ioo 0 L, HasDerivAt w (w' x) x)
+    (hac' : AbsolutelyContinuousOnInterval w' 0 L)
+    (hleft : w' 0 = 0) {k : ℕ} (hk : k ≠ 0) :
+    cosineCoeff L w k =
+      -(L / ((k : ℝ) * Real.pi)) ^ 2 *
+        (2 / L * ∫ x in (0 : ℝ)..L,
+          deriv w' x * Real.cos ((k : ℝ) * Real.pi * x / L)) := by
+  exact cosineCoeff_eq_neg_mul_secondDeriv L hL ⟨hac, hderiv, hac', hleft, ‹w' L = 0›⟩ hk

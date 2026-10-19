@@ -1,0 +1,11 @@
+import NeumannCosine.Basic
+
+/-! Negative control: the Gram value of a nonzero mode is `L / 2`, not `L`.
+Mutation of `NeumannCosine.integral_mode_mul_mode`: `L / 2` replaced by `L`. Must not compile. -/
+
+open NeumannCosine
+
+example (L : ℝ) (hL : 0 < L) (m n : ℕ) :
+    (∫ y in (0 : ℝ)..L, mode L m y * mode L n y) =
+      if m = n then (if m = 0 then L else L) else 0 := by
+  exact integral_mode_mul_mode L hL m n

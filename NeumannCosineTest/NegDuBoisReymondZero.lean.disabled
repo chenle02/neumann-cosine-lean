@@ -1,0 +1,13 @@
+import NeumannCosine.Sobolev.WeakDerivative
+
+/-! Negative control: the du Bois-Reymond lemma gives a constant, not zero.
+Mutation of `Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero`: the constant `c`
+replaced by `0` (false for `h = 1`). Must not compile. -/
+
+open MeasureTheory Set NeumannCosine.Sobolev.WeakDerivative
+
+example {L : ℝ} (hL : 0 < L) {h : ℝ → ℝ}
+    (hh : IntervalIntegrable h volume 0 L)
+    (H : ∀ φ : ℝ → ℝ, IsTestFunction L φ → ∫ x in (0 : ℝ)..L, h x * deriv φ x = 0) :
+    ∀ᵐ x, x ∈ Ioo 0 L → h x = 0 := by
+  exact ae_eq_const_of_integral_mul_deriv_eq_zero hL hh H

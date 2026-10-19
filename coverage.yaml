@@ -1,0 +1,151 @@
+schema: coverage/1
+package: neumann-cosine-lean
+kind: library
+summary: "Neumann cosine modes on [0, L]: Gram values, closed-form product integrals, absolutely summable cosine expansions of W^{2,1} and H^2 functions with Neumann data, one-dimensional weak derivatives, and the discrete Neumann Laplacian with its convergence to the continuum spectrum."
+rows:
+  - title: Orthogonality and Gram values of the Neumann cosine modes
+    claims:
+      - neumann-cosine-lean/integral-mode-mul-mode
+    statement: |-
+      For $L>0$ and $m,n\in\mathbb N$,
+      \[\int_0^L \cos\frac{m\pi y}{L}\cos\frac{n\pi y}{L}\,dy=\begin{cases}L,& m=n=0,\\ L/2,& m=n\neq 0,\\ 0,& m\neq n.\end{cases}\]
+  - title: Closed form of the integral of four cosine modes
+    claims:
+      - neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-cos
+    statement: |-
+      For $L>0$, $i,j,l,k\in\mathbb N$ and $c_m(x)=\cos(m\pi x/L)$,
+      \[\int_0^L c_i c_j c_l c_k\,dx=\frac L8\Big(\mathbf 1_{i+j+l=k}+\mathbf 1_{i+j-l=k}+\mathbf 1_{i+j-l=-k}+\mathbf 1_{i-j+l=k}+\mathbf 1_{i-j+l=-k}+\mathbf 1_{i-j-l=k}+\mathbf 1_{i-j-l=-k}\Big)+\frac L8\,\mathbf 1_{i=j=l=k=0},\]
+      with the index arithmetic in $\mathbb Z$.
+  - title: Integral of a product of three cosine series against a cosine
+    claims:
+      - neumann-cosine-lean/product-identities-cos-cos-cos-cos-lp
+    statement: |-
+      For $L>0$, $u,v,w\in\ell^1(\mathbb N)$ and $k\in\mathbb N$,
+      \[\int_0^L\Big(\sum_i u_i c_i\Big)\Big(\sum_j v_j c_j\Big)\Big(\sum_l w_l c_l\Big)c_k\,dx=\frac L8\sum_{\sigma}\ \sum_{i+\sigma_1 j+\sigma_2 l=\sigma_3 k}u_iv_jw_l+\frac L8\,\mathbf 1_{k=0}\,u_0v_0w_0,\]
+      where $c_m(x)=\cos(m\pi x/L)$ and $\sigma=(\sigma_1,\sigma_2,\sigma_3)$ runs over the seven sign patterns $(+,+,+)$, $(+,-,\pm)$, $(-,+,\pm)$, $(-,-,\pm)$; each inner sum is over $(i,j,l)\in\mathbb N^3$ with the constraint in $\mathbb Z$.
+  - title: Integral of two cosine series against two sines
+    claims:
+      - neumann-cosine-lean/product-identities-two-cosines-two-sines-lp
+    statement: |-
+      For $L>0$, $u,v\in\ell^1(\mathbb N)$ and $n,k\ge 1$, with $c_m(x)=\cos(m\pi x/L)$ and $s_m(x)=\sin(m\pi x/L)$,
+      \[\int_0^L\Big(\sum_i u_ic_i\Big)\Big(\sum_j v_jc_j\Big)s_ns_k\,dx=\frac L8\Big(\sum_{i-j=n-k}+\sum_{i-j=k-n}+\sum_{i+j=n-k}+\sum_{i+j=k-n}-\sum_{i-j=n+k}-\sum_{i-j=-(n+k)}-\sum_{i+j=n+k}\Big)u_iv_j,\]
+      each sum over $(i,j)\in\mathbb N^2$ with the constraint in $\mathbb Z$.
+  - title: Cosine coefficients of W^{2,1} Neumann functions are absolutely summable
+    claims:
+      - neumann-cosine-lean/coefficients-summable-norm-cosine-coeff
+    statement: |-
+      Let $L>0$ and let $w$ be absolutely continuous on $[0,L]$ with derivative $w'(x)$ at every $x\in(0,L)$, where $w'$ is absolutely continuous on $[0,L]$ and $w'(0)=w'(L)=0$. With $w_0=\frac1L\int_0^Lw$ and $w_k=\frac2L\int_0^Lw(x)\cos\frac{k\pi x}{L}\,dx$ for $k\ge1$,
+      \[\sum_{k\ge0}|w_k|<\infty.\]
+  - title: Pointwise cosine expansion of W^{2,1} Neumann functions
+    claims:
+      - neumann-cosine-lean/coefficients-has-sum-cosine-coeff
+    statement: |-
+      Under the hypotheses of the previous row, for every $x\in[0,L]$,
+      \[w(x)=\sum_{k\ge0}w_k\cos\frac{k\pi x}{L},\]
+      the series converging absolutely.
+  - title: The du Bois-Reymond lemma on an interval
+    claims:
+      - neumann-cosine-lean/sobolev-weak-derivative-ae-eq-const-of-integral-mul-deriv-eq-zero
+    statement: |-
+      Let $L>0$ and $h\in L^1(0,L)$. If $\int_0^L h\,\varphi'\,dx=0$ for every $\varphi\in C_c^\infty(0,L)$ (smooth, compactly supported, $\operatorname{tsupp}\varphi\subseteq(0,L)$), then there is $c\in\mathbb R$ with $h=c$ almost everywhere on $(0,L)$.
+  - title: W^{1,1} functions have an absolutely continuous representative
+    claims:
+      - neumann-cosine-lean/sobolev-weak-derivative-has-weak-deriv-ae-eq-primitive
+    statement: |-
+      Let $L>0$ and $w,g\in L^1(0,L)$ with $\int_0^Lw\,\varphi'\,dx=-\int_0^Lg\,\varphi\,dx$ for every $\varphi\in C_c^\infty(0,L)$. Then for some $c\in\mathbb R$ the function $W(x)=c+\int_0^xg(t)\,dt$ satisfies $w=W$ a.e. on $(0,L)$, $W$ is absolutely continuous on $[0,L]$, and $W'(x)=g(x)$ for almost every $x\in[0,L]$.
+  - title: Cosine expansion of H^2 functions with Neumann trace
+    claims:
+      - neumann-cosine-lean/sobolev-h2-neumann-h2-has-sum-cosine-coeff
+    statement: |-
+      Let $L>0$ and $w,w_1,w_2\in L^2(0,L)$, with $w_1$ the weak derivative of $w$ and $w_2$ the weak derivative of $w_1$ (tested against $C_c^\infty(0,L)$). Suppose some $V$ continuous on $[0,L]$ equals $w_1$ a.e. on $(0,L)$ and $V(0)=V(L)=0$. Then there is $W$ continuous on $[0,L]$ with $W=w$ a.e. on $(0,L)$ and, for every $x\in[0,L]$,
+      \[W(x)=\sum_{k\ge0}w_k\cos\frac{k\pi x}{L},\]
+      where $w_k$ are the cosine coefficients of $w$ (as above).
+  - title: Cosine eigenbasis of the discrete Neumann Laplacian
+    claims:
+      - neumann-cosine-lean/discrete-laplacian-reflected-neg-laplacian-cosine-eigenpair
+      - neumann-cosine-lean/discrete-laplacian-discrete-cosine-mode-exhaustion
+      - neumann-cosine-lean/discrete-laplacian-discrete-cosine-modes-linear-independent
+    statement: |-
+      Let $L\neq0$, $N\ge1$, $h=L/N$, and on the grid $\{0,\dots,N\}$ let $(\Delta_h u)_i=(2u_i-u_{i-1}-u_{i+1})/h^2$ with reflected ghost points $u_{-1}=u_1$, $u_{N+1}=u_{N-1}$. For $0\le n\le N$ the vector $u_j=\cos(n\pi j/N)$ satisfies
+      \[\Delta_h u=\frac{4}{h^2}\sin^2\frac{n\pi}{2N}\,u,\]
+      these $N+1$ cosine vectors are linearly independent, and every real function on the grid is a linear combination of them.
+  - title: Discrete Neumann eigenvalues converge to the continuum ones
+    claims:
+      - neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-tendsto
+    statement: |-
+      For $L>0$ and fixed $n\ge1$,
+      \[\lim_{N\to\infty}\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}=\Big(\frac{n\pi}{L}\Big)^2.\]
+  - title: Discrete modal minimum converges to the continuum infimum
+    claims:
+      - neumann-cosine-lean/discrete-modal-minimum-limit-discrete-modal-min-tendsto
+    statement: |-
+      Let $L>0$, $K>0$ and $f:\mathbb R\to\mathbb R$ continuous at every $x>0$ with $Kx\le f(x)$ for $x>0$. With $\lambda_n^N=\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}$,
+      \[\lim_{N\to\infty}\ \min_{1\le n\le N}f(\lambda_n^N)=\inf_{n\ge1}f\Big(\Big(\frac{n\pi}{L}\Big)^2\Big).\]
+  - title: Normalized projections of the Neumann modes
+    claims:
+      - neumann-cosine-lean/integral-cos-int-mul-pi-div
+      - neumann-cosine-lean/normalized-integral-mode-mul-self
+      - neumann-cosine-lean/normalized-integral-mode-three-mul
+      - neumann-cosine-lean/normalized-integral-mode-pow-four
+    statement: |-
+      For $L>0$ and $j\in\mathbb Z$, $\int_0^L\cos\frac{j\pi y}{L}\,dy=L\,\mathbf 1_{j=0}$. For $n\ge1$, with $c_m(y)=\cos(m\pi y/L)$,
+      \[\frac2L\int_0^Lc_n^2=1,\qquad\frac2L\int_0^Lc_{3n}c_n=0,\qquad\frac2L\int_0^Lc_n^3c_n=\frac34.\]
+  - title: Closed forms of the three-cosine and cosine-sine kernels
+    claims:
+      - neumann-cosine-lean/kernel-integrals-integral-cos-sin-sin
+      - neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos
+      - neumann-cosine-lean/kernel-integrals-integral-cos-cos-sin-sin
+    statement: |-
+      For $L>0$, $c_m(x)=\cos(m\pi x/L)$, $s_m(x)=\sin(m\pi x/L)$, index arithmetic in $\mathbb Z$: for $n,k\ge1$,
+      \[\int_0^Lc_is_ns_k=\frac L4\big(\mathbf 1_{i=|n-k|}-\mathbf 1_{i=n+k}+\mathbf 1_{n=k,\,i=0}\big);\]
+      for all $i,j,k$,
+      \[\int_0^Lc_ic_jc_k=\frac L4\big(\mathbf 1_{i-j=k}+\mathbf 1_{i-j=-k}+\mathbf 1_{i+j=k}\big)+\frac L4\mathbf 1_{i=j=k=0};\]
+      and for $n,k\ge1$, $\int_0^Lc_ic_js_ns_k=\frac L8\big(\mathbf 1_{i-j=n-k}+\mathbf 1_{i-j=k-n}+\mathbf 1_{i+j=n-k}+\mathbf 1_{i+j=k-n}-\mathbf 1_{i-j=n+k}-\mathbf 1_{i-j=-(n+k)}-\mathbf 1_{i+j=n+k}\big)$.
+  - title: Product identities for absolutely summable cosine series
+    claims:
+      - neumann-cosine-lean/product-identities-cosine-sine-sine
+      - neumann-cosine-lean/product-identities-two-cosines-two-sines
+      - neumann-cosine-lean/product-identities-cos-cos-cos
+      - neumann-cosine-lean/product-identities-cos-cos-cos-cos
+      - neumann-cosine-lean/product-identities-cosine-sine-sine-lp
+      - neumann-cosine-lean/product-identities-cos-cos-cos-lp
+    statement: |-
+      For $L>0$ and absolutely summable $u,v,w$ (given either by $\sum|u_i|<\infty$ or as elements of $\ell^1(\mathbb N)$), with $c_m,s_m$ as above: for $n,k\ge1$,
+      \[\int_0^L\Big(\sum_iu_ic_i\Big)s_ns_k=\frac L4\big(u_{|n-k|}-u_{n+k}+\mathbf 1_{n=k}u_0\big);\]
+      for $k\ge0$,
+      \[\int_0^L\Big(\sum_iu_ic_i\Big)\Big(\sum_jv_jc_j\Big)c_k=\frac L4\Big(\sum_{i-j=k}+\sum_{i-j=-k}+\sum_{i+j=k}\Big)u_iv_j+\frac L4\mathbf 1_{k=0}u_0v_0;\]
+      and the two-sine and three-series identities of the headline rows hold with summability hypotheses in place of $\ell^1$ membership.
+  - title: Termwise integration of a cosine series
+    claims:
+      - neumann-cosine-lean/series-termwise-integral-has-sum-interval-integral-cosine
+    statement: |-
+      Let $\sum_n|u_n|<\infty$ and let $\kappa$ be continuous with $|\kappa|\le C$. Then for all $a,b,L\in\mathbb R$,
+      \[\sum_n\int_a^bu_n\cos\frac{n\pi x}{L}\,\kappa(x)\,dx=\int_a^b\sum_nu_n\cos\frac{n\pi x}{L}\,\kappa(x)\,dx,\]
+      the series on the left converging.
+  - title: Quadratic decay of the cosine coefficients
+    claims:
+      - neumann-cosine-lean/coefficients-cosine-coeff-eq-neg-mul-second-deriv
+      - neumann-cosine-lean/coefficients-abs-cosine-coeff-le
+    statement: |-
+      Under the hypotheses of the $W^{2,1}$ rows, with $w''=(w')'$ (which exists a.e. and is integrable), for $k\ge1$,
+      \[w_k=-\Big(\frac{L}{k\pi}\Big)^2\frac2L\int_0^Lw''(x)\cos\frac{k\pi x}{L}\,dx,\qquad|w_k|\le\frac{2L}{\pi^2}\Big(\int_0^L|w''|\Big)\frac1{k^2}.\]
+  - title: Summable cosine coefficients of H^2 functions with Neumann trace
+    claims:
+      - neumann-cosine-lean/sobolev-h2-neumann-h2-summable-norm-cosine-coeff
+    statement: |-
+      Under the hypotheses of the $H^2$ row, $\sum_{k\ge0}|w_k|<\infty$.
+  - title: Cosine projection of a divergence-form source
+    claims:
+      - neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le
+      - neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le-of-absolutely-continuous
+    statement: |-
+      Let $L>0$, $k\in\mathbb N$, $R_0\in L^1(0,L)$ and $R_1$ with $R_1(0)=R_1(L)=0$, where either $R_1$ is continuous on $[0,L]$, differentiable at every point of $(0,L)$, with interval-integrable derivative $R_1'$, or $R_1$ is absolutely continuous on $[0,L]$. If $|R_0|,|R_1|\le B$ on $[0,L]$, then
+      \[\Big|\int_0^L\big(R_0(x)+R_1'(x)\big)\cos\frac{k\pi x}{L}\,dx\Big|\le(L+k\pi)B.\]
+  - title: 'Discrete Neumann eigenvalues: sinc form, ordering and lower bound'
+    claims:
+      - neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-eq-mul-sinc-sq
+      - neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-one-le
+      - neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-lower-bound
+      - neumann-cosine-lean/discrete-laplacian-discrete-neumann-eigenvalue-lt-of-lt
+    statement: |-
+      Let $\lambda_n^N=\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}$ and $N\ge1$. If $L\neq0$ and $n\ge1$, then $\lambda_n^N=(n\pi/L)^2\operatorname{sinc}^2\frac{n\pi}{2N}$; if $L\neq0$ and $n<k\le N$, then $\lambda_n^N<\lambda_k^N$; if $L>0$ and $1\le n\le N$, then $\lambda_1^N\le\lambda_n^N$; and if $L>0$ and $n\le N$, then $\lambda_n^N\ge4n^2/L^2$.

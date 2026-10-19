@@ -1,0 +1,11 @@
+import NeumannCosine.Discrete.Laplacian
+
+/-! Negative control: exhausting the grid functions needs all `N + 1` cosine modes.
+Mutation of `Discrete.Laplacian.discreteCosineMode_exhaustion`: only the modes `0 ≤ n < N`
+(`Fin N`) are allowed (false: the grid space has dimension `N + 1`). Must not compile. -/
+
+open NeumannCosine.Discrete.Laplacian
+
+example (L : ℝ) (N : ℕ) (hL : L ≠ 0) (hN : 0 < N) (u : GridFunction N) :
+    ∃ c : Fin N → ℝ, ∑ n : Fin N, c n • discreteCosineMode N n.val = u := by
+  exact discreteCosineMode_exhaustion L N hL hN u

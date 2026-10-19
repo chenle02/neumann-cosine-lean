@@ -1,0 +1,22 @@
+{
+  "challenge_module": "NeumannCosine.HeadlineChallenge",
+  "solution_module": "NeumannCosine.HeadlineSolution",
+  "theorem_names": [
+    "NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode",
+    "NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos",
+    "NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp",
+    "NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp",
+    "NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff",
+    "NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff",
+    "NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero",
+    "NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive",
+    "NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff",
+    "NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair",
+    "NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion",
+    "NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto",
+    "NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

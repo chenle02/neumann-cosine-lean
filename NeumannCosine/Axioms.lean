@@ -1,0 +1,266 @@
+module
+/-
+Copyright (c) 2026 Le Chen. Released under Apache 2.0 license as described in the file LICENSE.
+-/
+
+import NeumannCosine.Basic
+import NeumannCosine.Coefficients
+import NeumannCosine.Discrete.Eigenvalues
+import NeumannCosine.Discrete.Laplacian
+import NeumannCosine.Discrete.ModalMinimumLimit
+import NeumannCosine.Discrete.ModalMinimumTail
+import NeumannCosine.DivergenceFormProjection
+import NeumannCosine.KernelIntegrals
+import NeumannCosine.ProductIdentities
+import NeumannCosine.Series.Products
+import NeumannCosine.Series.TermwiseIntegral
+import NeumannCosine.Sobolev.H2Neumann
+import NeumannCosine.Sobolev.WeakDerivative
+import NeumannCosine.Solution
+import NeumannCosine.HeadlineSolution
+
+/-!
+# Axiom report
+
+`verify.sh` builds this module; the lower-tier receipt reads the `#print axioms` output.
+Part 1: every declaration of `claims.yaml` (in file order). Part 2: every comparator
+Solution theorem (`comparator.json`, then `comparator.headline.json`). Each must depend only on
+`propext`, `Quot.sound` and `Classical.choice`.
+-/
+
+/-! ## Part 1: claims.yaml -/
+
+#print axioms NeumannCosine.Coefficients.NeumannW21
+#print axioms NeumannCosine.Coefficients.NeumannW21.of_contDiff
+#print axioms NeumannCosine.Coefficients.abs_cosineCoeff_le
+#print axioms NeumannCosine.Coefficients.cos_cos_cos_cos_of_neumann
+#print axioms NeumannCosine.Coefficients.cos_cos_cos_of_neumann
+#print axioms NeumannCosine.Coefficients.cosineCoeff
+#print axioms NeumannCosine.Coefficients.cosineCoeff_eq_halfCoeff
+#print axioms NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv
+#print axioms NeumannCosine.Coefficients.cosineCoeff_of_ne_zero
+#print axioms NeumannCosine.Coefficients.cosineCoeff_zero
+#print axioms NeumannCosine.Coefficients.cosine_sine_sine_of_neumann
+#print axioms NeumannCosine.Coefficients.evenExt
+#print axioms NeumannCosine.Coefficients.evenPeriodic
+#print axioms NeumannCosine.Coefficients.evenPeriodic_apply
+#print axioms NeumannCosine.Coefficients.fourierCoeff_evenPeriodic
+#print axioms NeumannCosine.Coefficients.halfCoeff
+#print axioms NeumannCosine.Coefficients.halfCoeff_neg
+#print axioms NeumannCosine.Coefficients.hasSum_cosineCoeff
+#print axioms NeumannCosine.Coefficients.integral_mul_cos_eq
+#print axioms NeumannCosine.Coefficients.summable_halfCoeff
+#print axioms NeumannCosine.Coefficients.summable_norm_cosineCoeff
+#print axioms NeumannCosine.Coefficients.tsum_cosineCoeff_eq
+#print axioms NeumannCosine.Coefficients.two_cosines_two_sines_of_neumann
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_mem_Icc
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_one_le
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_tendsto_zero
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le
+#print axioms NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto
+#print axioms NeumannCosine.Discrete.Eigenvalues.exists_forall_le_of_tendsto_atTop
+#print axioms NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue
+#print axioms NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_pos
+#print axioms NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_succ_tendsto_atTop
+#print axioms NeumannCosine.Discrete.Laplacian.Grid
+#print axioms NeumannCosine.Discrete.Laplacian.GridFunction
+#print axioms NeumannCosine.Discrete.Laplacian.cos_reflected_right_identity
+#print axioms NeumannCosine.Discrete.Laplacian.cos_step_identity
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineBasis
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineMode
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineMode_hasEigenvector
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineMode_ne_zero
+#print axioms NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent
+#print axioms NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_injective
+#print axioms NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt
+#print axioms NeumannCosine.Discrete.Laplacian.meshWidth
+#print axioms NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian
+#print axioms NeumannCosine.Discrete.Laplacian.reflectedNegLaplacianApply
+#print axioms NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair
+#print axioms NeumannCosine.Discrete.Laplacian.reflectedNext
+#print axioms NeumannCosine.Discrete.Laplacian.reflectedPrev
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf_eq_finset_inf'
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.positiveModes
+#print axioms NeumannCosine.Discrete.ModalMinimumLimit.positiveModes_nonempty
+#print axioms NeumannCosine.Discrete.ModalMinimumTail.comp_discreteNeumannEigenvalue_tendsto
+#print axioms NeumannCosine.Discrete.ModalMinimumTail.exists_quadratic_tail
+#print axioms NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_continuum_tail
+#print axioms NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_discrete_tail
+#print axioms NeumannCosine.Discrete.ModalMinimumTail.finset_inf'_eq_of_tail
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_add_mul_cos_le_of_ibp
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_le_of_abs_le
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_deriv
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_example
+#print axioms NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous
+#print axioms NeumannCosine.DivergenceFormProjection.integral_deriv_mul_cos
+#print axioms NeumannCosine.KernelIntegrals.continuous_intMode
+#print axioms NeumannCosine.KernelIntegrals.cos_cos_cos_cos_eq
+#print axioms NeumannCosine.KernelIntegrals.cos_cos_cos_eq
+#print axioms NeumannCosine.KernelIntegrals.cos_cos_sin_sin_eq
+#print axioms NeumannCosine.KernelIntegrals.cos_sin_sin_eq
+#print axioms NeumannCosine.KernelIntegrals.indicatorR
+#print axioms NeumannCosine.KernelIntegrals.intMode
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_signed
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_zero_mode
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos_signed
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_cos_zero_mode
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin_signed
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_sin_sin
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_sin_sin_signed
+#print axioms NeumannCosine.KernelIntegrals.integral_cos_sin_sin_zero_mode
+#print axioms NeumannCosine.KernelIntegrals.integral_eight_intMode
+#print axioms NeumannCosine.KernelIntegrals.integral_four_intMode
+#print axioms NeumannCosine.KernelIntegrals.integral_intMode
+#print axioms NeumannCosine.KernelIntegrals.sinMode
+#print axioms NeumannCosine.ProductIdentities.cos_cos_cos
+#print axioms NeumannCosine.ProductIdentities.cos_cos_cos_cos
+#print axioms NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp
+#print axioms NeumannCosine.ProductIdentities.cos_cos_cos_lp
+#print axioms NeumannCosine.ProductIdentities.cosine_sine_sine
+#print axioms NeumannCosine.ProductIdentities.cosine_sine_sine_lp
+#print axioms NeumannCosine.ProductIdentities.kernel_cos_cos_cos
+#print axioms NeumannCosine.ProductIdentities.kernel_cos_cos_cos_cos
+#print axioms NeumannCosine.ProductIdentities.kernel_cos_cos_sin_sin
+#print axioms NeumannCosine.ProductIdentities.kernel_cos_sin_sin
+#print axioms NeumannCosine.ProductIdentities.two_cosines_two_sines
+#print axioms NeumannCosine.ProductIdentities.two_cosines_two_sines_lp
+#print axioms NeumannCosine.Series.Products.continuous_cos_phase
+#print axioms NeumannCosine.Series.Products.continuous_sin_phase
+#print axioms NeumannCosine.Series.Products.cos_cos_cos_cos_of_kernel
+#print axioms NeumannCosine.Series.Products.cos_cos_cos_of_kernel
+#print axioms NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries
+#print axioms NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries_mul_cosineSeries
+#print axioms NeumannCosine.Series.Products.cosine_sine_sine_of_kernel
+#print axioms NeumannCosine.Series.Products.hasSum_integral_tsum_mul
+#print axioms NeumannCosine.Series.Products.hasSum_integral_tsum_mul_tsum
+#print axioms NeumannCosine.Series.Products.hasSum_mul_ite
+#print axioms NeumannCosine.Series.Products.hasSum_mul_ite_int_eq
+#print axioms NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_neg
+#print axioms NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_of_neg
+#print axioms NeumannCosine.Series.Products.hasSum_triple_ite_add_add_eq_neg
+#print axioms NeumannCosine.Series.Products.norm_cos_phase_le_one
+#print axioms NeumannCosine.Series.Products.norm_cos_phase_mul_le_one
+#print axioms NeumannCosine.Series.Products.norm_sin_mul_sin_le_one
+#print axioms NeumannCosine.Series.Products.norm_sin_phase_le_one
+#print axioms NeumannCosine.Series.Products.summable_norm_mul_bounded
+#print axioms NeumannCosine.Series.Products.summable_norm_of_lp_one
+#print axioms NeumannCosine.Series.Products.tsum_mul_tsum_bounded
+#print axioms NeumannCosine.Series.Products.two_cosines_two_sines_of_kernel
+#print axioms NeumannCosine.Series.TermwiseIntegral.TripleIndex
+#print axioms NeumannCosine.Series.TermwiseIntegral.boundedPhaseTerm
+#print axioms NeumannCosine.Series.TermwiseIntegral.continuous_pairMode
+#print axioms NeumannCosine.Series.TermwiseIntegral.continuous_tripleMode
+#print axioms NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_boundedPhase
+#print axioms NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine
+#print axioms NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosinePair
+#print axioms NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosineTriple
+#print axioms NeumannCosine.Series.TermwiseIntegral.norm_pairMode_le_one
+#print axioms NeumannCosine.Series.TermwiseIntegral.norm_tripleMode_le_one
+#print axioms NeumannCosine.Series.TermwiseIntegral.pairMode
+#print axioms NeumannCosine.Series.TermwiseIntegral.summable_boundedPhaseTerm
+#print axioms NeumannCosine.Series.TermwiseIntegral.summable_norm_pairCoefficient
+#print axioms NeumannCosine.Series.TermwiseIntegral.summable_norm_tripleCoefficient
+#print axioms NeumannCosine.Series.TermwiseIntegral.tripleCoefficient
+#print axioms NeumannCosine.Series.TermwiseIntegral.tripleMode
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2.exists_neumannW21
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv2
+#print axioms NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff
+#print axioms NeumannCosine.Sobolev.H2Neumann.NeumannTrace
+#print axioms NeumannCosine.Sobolev.H2Neumann.cosineCoeff_congr_ae
+#print axioms NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv
+#print axioms NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive
+#print axioms NeumannCosine.Sobolev.WeakDerivative.IsTestFunction
+#print axioms NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.eq_zero_of_notMem
+#print axioms NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous
+#print axioms NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous_deriv
+#print axioms NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.integral_mul_eq
+#print axioms NeumannCosine.Sobolev.WeakDerivative.absolutelyContinuousOnInterval_const_add
+#print axioms NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero
+#print axioms NeumannCosine.Sobolev.WeakDerivative.eqOn_of_ae_eq_continuousOn
+#print axioms NeumannCosine.Sobolev.WeakDerivative.exists_Icc_of_isCompact
+#print axioms NeumannCosine.Sobolev.WeakDerivative.integral_congr_ae_Ioo
+#print axioms NeumannCosine.Sobolev.WeakDerivative.intervalIntegrable_of_memLp
+#print axioms NeumannCosine.Sobolev.WeakDerivative.isTestFunction_primitive
+#print axioms NeumannCosine.continuous_mode
+#print axioms NeumannCosine.cos_freq_mul
+#print axioms NeumannCosine.cos_pow_three
+#print axioms NeumannCosine.freq
+#print axioms NeumannCosine.freq_mul_length
+#print axioms NeumannCosine.freq_nonneg
+#print axioms NeumannCosine.integral_cos_const_mul
+#print axioms NeumannCosine.integral_cos_int_mul_pi_div
+#print axioms NeumannCosine.integral_mode_mul_mode
+#print axioms NeumannCosine.mode
+#print axioms NeumannCosine.mode_eq_cos_freq
+#print axioms NeumannCosine.norm_mode_le_one
+#print axioms NeumannCosine.normalized_integral_mode_mul_self
+#print axioms NeumannCosine.normalized_integral_mode_pow_four
+#print axioms NeumannCosine.normalized_integral_mode_three_mul
+
+/-! ## Part 2: comparator Solution theorems -/
+
+#print axioms NeumannCosineAudit.NeumannCosine.integral_mode_mul_mode
+#print axioms NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp
+#print axioms NeumannCosineAudit.NeumannCosine.Coefficients.summable_norm_cosineCoeff
+#print axioms NeumannCosineAudit.NeumannCosine.Coefficients.hasSum_cosineCoeff
+#print axioms NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero
+#print axioms NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive
+#print axioms NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto
+#print axioms NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div
+#print axioms NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self
+#print axioms NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul
+#print axioms NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four
+#print axioms NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin
+#print axioms NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos
+#print axioms NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp
+#print axioms NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp
+#print axioms NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine
+#print axioms NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv
+#print axioms NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le
+#print axioms NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff
+#print axioms NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le
+#print axioms NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt
+#print axioms NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent
+#print axioms NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode
+#print axioms NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos
+#print axioms NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp
+#print axioms NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp
+#print axioms NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff
+#print axioms NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff
+#print axioms NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero
+#print axioms NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive
+#print axioms NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff
+#print axioms NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair
+#print axioms NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion
+#print axioms NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto
+#print axioms NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto

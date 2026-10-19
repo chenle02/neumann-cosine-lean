@@ -1,0 +1,16 @@
+import NeumannCosine.KernelIntegrals
+
+/-! Negative control: in the four-cosine kernel the first constraint is `i + j + l = k`.
+Mutation of `KernelIntegrals.integral_cos_cos_cos_cos`: its sign flipped to `i + j + l = -k`.
+Must not compile. -/
+
+open NeumannCosine NeumannCosine.KernelIntegrals
+
+example (L : ℝ) (hL : 0 < L) (i j l k : ℕ) :
+    (∫ x in (0 : ℝ)..L, mode L i x * mode L j x * mode L l x * mode L k x) =
+      L / 8 * (indicatorR ((i : ℤ) + j + l = -k) + indicatorR ((i : ℤ) + j - l = k) +
+        indicatorR ((i : ℤ) + j - l = -k) + indicatorR ((i : ℤ) - j + l = k) +
+        indicatorR ((i : ℤ) - j + l = -k) + indicatorR ((i : ℤ) - j - l = k) +
+        indicatorR ((i : ℤ) - j - l = -k)) +
+        L / 8 * indicatorR (k = 0 ∧ i = 0 ∧ j = 0 ∧ l = 0) := by
+  exact integral_cos_cos_cos_cos L hL i j l k

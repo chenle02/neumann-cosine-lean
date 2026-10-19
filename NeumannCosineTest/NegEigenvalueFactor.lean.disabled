@@ -1,0 +1,12 @@
+import NeumannCosine.Discrete.Eigenvalues
+
+/-! Negative control: the discrete eigenvalue has the factor `4 / h²`, not `2 / h²`.
+Mutation of `discreteNeumannEigenvalue_tendsto`: `4` replaced by `2`. Must not compile. -/
+
+open Filter Topology NeumannCosine.Discrete.Eigenvalues
+
+example (L : ℝ) (n : ℕ) (hL : 0 < L) (hn : 0 < n) :
+    Tendsto (fun N : ℕ =>
+        2 / (L / (N : ℝ)) ^ 2 * Real.sin ((n : ℝ) * Real.pi / (2 * (N : ℝ))) ^ 2)
+      atTop (𝓝 (((n : ℝ) * Real.pi / L) ^ 2)) := by
+  exact discreteNeumannEigenvalue_tendsto L n hL hn

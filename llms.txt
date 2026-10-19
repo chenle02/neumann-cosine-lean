@@ -1,0 +1,38 @@
+# NeumannCosine (neumann-cosine-lean) — version 0.1.0
+
+Neumann cosine series on an interval [0, L] and the discrete Neumann Laplacian, in Lean 4 with Mathlib.
+Lean v4.35.0, Mathlib v4.35.0. Namespace NeumannCosine. Apache-2.0. Author Le Chen.
+Repository: https://github.com/chenle02/neumann-cosine-lean
+
+The Lean declaration decides every hypothesis. Prose is not checked by Lean.
+A receipt under .lean-receipts/ covers only the commit it names.
+
+Headline declarations (most assume 0 < L):
+- NeumannCosine.integral_mode_mul_mode: Gram values L, L/2, 0 of cos(kπx/L) on [0, L].
+- NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos: closed form of the four-mode integral.
+- NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp: three ℓ¹ cosine series against a mode, as constrained sums.
+- NeumannCosine.ProductIdentities.two_cosines_two_sines_lp: two ℓ¹ cosine series against two sines (n, k ≥ 1).
+- NeumannCosine.Coefficients.summable_norm_cosineCoeff: NeumannW21 gives ℓ¹ cosine coefficients.
+- NeumannCosine.Coefficients.hasSum_cosineCoeff: NeumannW21 gives the pointwise expansion on [0, L].
+- NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero: du Bois-Reymond on (0, L).
+- NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive: W^{1,1} gives an absolutely continuous representative.
+- NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff: H² with Neumann trace gives the expansion of a continuous representative.
+- NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair, discreteCosineMode_exhaustion: cosine eigenbasis of the reflected three-point stencil (L ≠ 0, N > 0).
+- NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto: (4/h²) sin²(nπ/2N) → (nπ/L)².
+- NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto: discrete modal minimum → continuum infimum, for f continuous on (0, ∞) with K x ≤ f x, K > 0.
+
+Not proved:
+- No PDE existence, uniqueness or regularity theory; no semigroup.
+- No L² completeness of the cosine system; no Parseval identity for general L² functions.
+- No general bridge to Mathlib's fourierCoeff (only fourierCoeff_evenPeriodic for NeumannW21); planned for v0.2.
+- One dimension only.
+
+Required context:
+- [README](README.md)
+- [Agent contract](AGENTS.md)
+- [Verification page: each Lean statement and its receipts](docs/verification.md) (generated)
+- [Trust and axioms](README.md#trust-and-axioms)
+- [Claims](claims.yaml)
+- [Contributing](CONTRIBUTING.md)
+
+Build: lake exe cache get && lake build. Keep lean-toolchain and lake-manifest.json unchanged; never run lake update in a verification run.
