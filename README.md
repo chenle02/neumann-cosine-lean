@@ -7,6 +7,7 @@ Neumann cosine series on an interval $`[0,L]`$ and the discrete Neumann Laplacia
 [![Lean](https://img.shields.io/badge/Lean-v4.35.0-153e63)](lean-toolchain)
 [![Mathlib](https://img.shields.io/badge/Mathlib-v4.35.0-153e63)](https://github.com/leanprover-community/mathlib4/tree/56a005855ea17e0b0958f73ec801ae140b0a1679)
 [![Release](https://img.shields.io/badge/release-v0.1.0-153e63)](https://github.com/chenle02/neumann-cosine-lean/releases/tag/v0.1.0)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23488175.svg)](https://doi.org/10.5281/zenodo.23488175)
 [![License](https://img.shields.io/badge/license-Apache--2.0-153e63)](LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2610.20976-153e63)](https://arxiv.org/abs/2610.20976)
 

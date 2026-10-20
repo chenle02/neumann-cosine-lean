@@ -8,6 +8,15 @@ authors:
   affiliation: Auburn University
 license: Apache-2.0
 version: 0.1.0
+date-released: '2026-10-20'
+doi: 10.5281/zenodo.23488175
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.23488175
+  description: Concept DOI (all versions; resolves to the latest release)
+- type: doi
+  value: 10.5281/zenodo.23488176
+  description: Version DOI for v0.1.0
 repository-code: https://github.com/chenle02/neumann-cosine-lean
 abstract: Lean 4 library on Neumann cosine series on [0, L] and the discrete Neumann Laplacian.
   It proves orthogonality of the modes, closed forms for integrals of products of modes and of
