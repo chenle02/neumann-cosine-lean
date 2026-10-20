@@ -1,0 +1,23 @@
+{
+  "commit": "067501d7208cc9f8bf0706b78b0080ea9b965b54",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "100d3def2f77af5038100d6a8d6b3c27c3df0246800f493128051146642865e7",
+  "job_id": "slurm-5586732",
+  "checker": "lean-pkg 0.7.49 template (SRC_MODE=clone, no DEPS_TAR, empty Mathlib cache) cold build: Lake clones every pinned dependency from GitHub and compiles Mathlib and the library from source; then serial leanchecker over every library and Solution module and #print axioms over all claims; Easley Slurm, glibc-2.35 container",
+  "generated_at": "2026-10-19T23:58:02Z",
+  "job_stdout_sha256": "4e1afc97dc579a870a5bad4f667d65ad379c744727ec3972959bf0897a0fcb4e",
+  "manifest_sha256": "b01bd50494f2f857fba128e85332ef07930bedb20605995ada7a9f22e81c418c",
+  "log_commit_bound": true,
+  "report_compressed": {
+    "format": "gzip",
+    "sha256": "be501e45e96775d34276f0e81b7796975bf59946420b37aefda3a6c86249a955",
+    "bytes": 654086
+  }
+}
