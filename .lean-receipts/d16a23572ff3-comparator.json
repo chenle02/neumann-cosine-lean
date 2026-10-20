@@ -1,0 +1,160 @@
+{
+  "build_provenance": {
+    "cache_reused": 7,
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": null
+  },
+  "commit": "d16a23572ff3212856109dda2010668ed7adbf73",
+  "configs": [
+    {
+      "challenge_module": "NeumannCosine.HeadlineChallenge",
+      "definition_names": [],
+      "log": ".lean-receipts/d16a23572ff3-comparator-comparator.headline.log",
+      "log_sha256": "402ddcd7d97849c1d50d35c58e8aaea8864c5caf56a7a72ee3e31d86f766b17d",
+      "path": "comparator.headline.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "04d949795251c39dc1bc6076453e9706bdbd39986493577b6fda126c31d22bf4",
+      "solution_module": "NeumannCosine.HeadlineSolution",
+      "theorem_names": [
+        "NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode",
+        "NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos",
+        "NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp",
+        "NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp",
+        "NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff",
+        "NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff",
+        "NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero",
+        "NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive",
+        "NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff",
+        "NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair",
+        "NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion",
+        "NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto",
+        "NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto"
+      ]
+    },
+    {
+      "challenge_module": "NeumannCosine.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/d16a23572ff3-comparator-comparator.log",
+      "log_sha256": "0e097ce4b378f5001cf5afde7b61733c5639d76160d6b7c2e8ca9aeae1eb98a3",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "988dc0f3c69e482229c9d69c9a27ab99d40d99b716eab4544c1a656b6e1b6522",
+      "solution_module": "NeumannCosine.Solution",
+      "theorem_names": [
+        "NeumannCosineAudit.NeumannCosine.integral_mode_mul_mode",
+        "NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp",
+        "NeumannCosineAudit.NeumannCosine.Coefficients.summable_norm_cosineCoeff",
+        "NeumannCosineAudit.NeumannCosine.Coefficients.hasSum_cosineCoeff",
+        "NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero",
+        "NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive",
+        "NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto",
+        "NeumannCosineAudit.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto",
+        "NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div",
+        "NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self",
+        "NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul",
+        "NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four",
+        "NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin",
+        "NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos",
+        "NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp",
+        "NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp",
+        "NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine",
+        "NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv",
+        "NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le",
+        "NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff",
+        "NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le",
+        "NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt",
+        "NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent"
+      ]
+    }
+  ],
+  "generated_at": "2026-10-20T02:11:14+00:00",
+  "host": "lab-workstation",
+  "host_label": "lab-workstation",
+  "host_policy": "allowed by COMPARATOR_RECEIPT_ALLOW_HOST=1",
+  "job_id": "local-lab-workstation-634267-20261020T021114Z",
+  "judges": 1,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 57,
+    "lake_manifest_sha256": "b01bd50494f2f857fba128e85332ef07930bedb20605995ada7a9f22e81c418c",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "faa4aa96def8afdcc426fd9dcdc8e6da0715a65dfc752ae8124f105a7da1475f"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": 8192,
+    "source": "inherited"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "prepared",
+      "wall_s": 32.783
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "prepared",
+      "wall_s": 6.007
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "prepared",
+      "wall_s": 9.437
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 538.868
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
