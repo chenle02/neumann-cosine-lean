@@ -1035,7 +1035,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *NeumannCosine: Neumann cosine series on an interval and the discrete Neumann Laplacian in Lean 4*. Version 0.1.0.
+Le Chen. *NeumannCosine: Neumann cosine series on an interval and the discrete Neumann Laplacian in Lean 4*. Version 0.1.0. [doi:10.5281/zenodo.23488175](https://doi.org/10.5281/zenodo.23488175).
 
 See [CITATION.cff](CITATION.cff).
 
