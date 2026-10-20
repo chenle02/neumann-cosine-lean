@@ -149,3 +149,8 @@ rows:
       - neumann-cosine-lean/discrete-laplacian-discrete-neumann-eigenvalue-lt-of-lt
     statement: |-
       Let $\lambda_n^N=\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}$ and $N\ge1$. If $L\neq0$ and $n\ge1$, then $\lambda_n^N=(n\pi/L)^2\operatorname{sinc}^2\frac{n\pi}{2N}$; if $L\neq0$ and $n<k\le N$, then $\lambda_n^N<\lambda_k^N$; if $L>0$ and $1\le n\le N$, then $\lambda_1^N\le\lambda_n^N$; and if $L>0$ and $n\le N$, then $\lambda_n^N\ge4n^2/L^2$.
+compute:
+- cluster: easley
+  jobs:
+  - slurm-5586731
+  - slurm-5586732
