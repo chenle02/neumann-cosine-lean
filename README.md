@@ -225,7 +225,7 @@ For $L>0$ and $m,n\in\mathbb N$,
 \[\int_0^L \cos\frac{m\pi y}{L}\cos\frac{n\pi y}{L}\,dy=\begin{cases}L,& m=n=0,\\ L/2,& m=n\neq 0,\\ 0,& m\neq n.\end{cases}\]
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_mode_mul_mode (L : ℝ) (hL : 0 < L) (m n : ℕ) :
@@ -248,7 +248,7 @@ For $L>0$, $i,j,l,k\in\mathbb N$ and $c_m(x)=\cos(m\pi x/L)$,
 with the index arithmetic in $\mathbb Z$.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_cos_cos_cos_cos (L : ℝ) (hL : 0 < L) (i j l k : ℕ) :
@@ -279,7 +279,7 @@ For $L>0$, $u,v,w\in\ell^1(\mathbb N)$ and $k\in\mathbb N$,
 where $c_m(x)=\cos(m\pi x/L)$ and $\sigma=(\sigma_1,\sigma_2,\sigma_3)$ runs over the seven sign patterns $(+,+,+)$, $(+,-,\pm)$, $(-,+,\pm)$, $(-,-,\pm)$; each inner sum is over $(i,j,l)\in\mathbb N^3$ with the constraint in $\mathbb Z$.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cos_cos_cos_cos_lp (L : ℝ) (hL : 0 < L)
@@ -321,7 +321,7 @@ For $L>0$, $u,v\in\ell^1(\mathbb N)$ and $n,k\ge 1$, with $c_m(x)=\cos(m\pi x/L)
 each sum over $(i,j)\in\mathbb N^2$ with the constraint in $\mathbb Z$.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem two_cosines_two_sines_lp (L : ℝ) (hL : 0 < L)
@@ -361,7 +361,7 @@ Let $L>0$ and let $w$ be absolutely continuous on $[0,L]$ with derivative $w'(x)
 \[\sum_{k\ge0}|w_k|<\infty.\]
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem summable_norm_cosineCoeff (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
@@ -388,7 +388,7 @@ Under the hypotheses of the previous row, for every $x\in[0,L]$,
 the series converging absolutely.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem hasSum_cosineCoeff (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
@@ -414,7 +414,7 @@ theorem hasSum_cosineCoeff (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
 Let $L>0$ and $h\in L^1(0,L)$. If $\int_0^L h\,\varphi'\,dx=0$ for every $\varphi\in C_c^\infty(0,L)$ (smooth, compactly supported, $\operatorname{tsupp}\varphi\subseteq(0,L)$), then there is $c\in\mathbb R$ with $h=c$ almost everywhere on $(0,L)$.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem ae_eq_const_of_integral_mul_deriv_eq_zero {L : ℝ} (hL : 0 < L) {h : ℝ → ℝ}
@@ -436,7 +436,7 @@ theorem ae_eq_const_of_integral_mul_deriv_eq_zero {L : ℝ} (hL : 0 < L) {h : �
 Let $L>0$ and $w,g\in L^1(0,L)$ with $\int_0^Lw\,\varphi'\,dx=-\int_0^Lg\,\varphi\,dx$ for every $\varphi\in C_c^\infty(0,L)$. Then for some $c\in\mathbb R$ the function $W(x)=c+\int_0^xg(t)\,dt$ satisfies $w=W$ a.e. on $(0,L)$, $W$ is absolutely continuous on $[0,L]$, and $W'(x)=g(x)$ for almost every $x\in[0,L]$.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem HasWeakDeriv.ae_eq_primitive {L : ℝ} (hL : 0 < L) {w g : ℝ → ℝ}
@@ -462,7 +462,7 @@ Let $L>0$ and $w,w_1,w_2\in L^2(0,L)$, with $w_1$ the weak derivative of $w$ and
 where $w_k$ are the cosine coefficients of $w$ (as above).
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem H2.hasSum_cosineCoeff {L : ℝ} (hL : 0 < L) {w w₁ w₂ : ℝ → ℝ}
@@ -496,7 +496,7 @@ Let $L\neq0$, $N\ge1$, $h=L/N$, and on the grid $\{0,\dots,N\}$ let $(\Delta_h u
 these $N+1$ cosine vectors are linearly independent, and every real function on the grid is a linear combination of them.
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem reflectedNegLaplacian_cosine_eigenpair (L : ℝ) (N n : ℕ) (hL : L ≠ 0)
@@ -508,7 +508,7 @@ theorem reflectedNegLaplacian_cosine_eigenpair (L : ℝ) (N n : ℕ) (hL : L ≠
       4 / (L / (N : ℝ)) ^ 2 * Real.sin ((n : ℝ) * Real.pi / (2 * (N : ℝ))) ^ 2 * u i
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteCosineMode_exhaustion (L : ℝ) (N : ℕ) (hL : L ≠ 0) (hN : 0 < N)
@@ -518,7 +518,7 @@ theorem discreteCosineMode_exhaustion (L : ℝ) (N : ℕ) (hL : L ≠ 0) (hN : 0
         Real.cos (((n : ℕ) : ℝ) * Real.pi * ((j : ℕ) : ℝ) / (N : ℝ))) = u
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteCosineModes_linearIndependent (L : ℝ) (N : ℕ) (hL : L ≠ 0) (hN : 0 < N) :
@@ -539,7 +539,7 @@ For $L>0$ and fixed $n\ge1$,
 \[\lim_{N\to\infty}\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}=\Big(\frac{n\pi}{L}\Big)^2.\]
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteNeumannEigenvalue_tendsto (L : ℝ) (n : ℕ) (hL : 0 < L) (hn : 0 < n) :
@@ -561,7 +561,7 @@ Let $L>0$, $K>0$ and $f:\mathbb R\to\mathbb R$ continuous at every $x>0$ with $K
 \[\lim_{N\to\infty}\ \min_{1\le n\le N}f(\lambda_n^N)=\inf_{n\ge1}f\Big(\Big(\frac{n\pi}{L}\Big)^2\Big).\]
 ```
 
-**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteModalMin_tendsto (f : ℝ → ℝ) (K L : ℝ) (hK : 0 < K) (hL : 0 < L)
@@ -585,7 +585,7 @@ For $L>0$ and $j\in\mathbb Z$, $\int_0^L\cos\frac{j\pi y}{L}\,dy=L\,\mathbf 1_{j
 \[\frac2L\int_0^Lc_n^2=1,\qquad\frac2L\int_0^Lc_{3n}c_n=0,\qquad\frac2L\int_0^Lc_n^3c_n=\frac34.\]
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_cos_int_mul_pi_div (L : ℝ) (hL : 0 < L) (j : ℤ) :
@@ -594,7 +594,7 @@ theorem integral_cos_int_mul_pi_div (L : ℝ) (hL : 0 < L) (j : ℤ) :
         if j = 0 then L else 0
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem normalized_integral_mode_mul_self (L : ℝ) (n : ℕ) (hL : 0 < L) (hn : 0 < n) :
@@ -602,7 +602,7 @@ theorem normalized_integral_mode_mul_self (L : ℝ) (n : ℕ) (hL : 0 < L) (hn :
       Real.cos ((n : ℝ) * Real.pi * y / L) * Real.cos ((n : ℝ) * Real.pi * y / L)) = 1
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem normalized_integral_mode_three_mul (L : ℝ) (n : ℕ) (hL : 0 < L) (hn : 0 < n) :
@@ -610,7 +610,7 @@ theorem normalized_integral_mode_three_mul (L : ℝ) (n : ℕ) (hL : 0 < L) (hn 
       Real.cos (((3 * n : ℕ) : ℝ) * Real.pi * y / L) * Real.cos ((n : ℝ) * Real.pi * y / L)) = 0
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem normalized_integral_mode_pow_four (L : ℝ) (n : ℕ) (hL : 0 < L) (hn : 0 < n) :
@@ -634,7 +634,7 @@ for all $i,j,k$,
 and for $n,k\ge1$, $\int_0^Lc_ic_js_ns_k=\frac L8\big(\mathbf 1_{i-j=n-k}+\mathbf 1_{i-j=k-n}+\mathbf 1_{i+j=n-k}+\mathbf 1_{i+j=k-n}-\mathbf 1_{i-j=n+k}-\mathbf 1_{i-j=-(n+k)}-\mathbf 1_{i+j=n+k}\big)$.
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_cos_sin_sin (L : ℝ) (hL : 0 < L) (i n k : ℕ)
@@ -647,7 +647,7 @@ theorem integral_cos_sin_sin (L : ℝ) (hL : 0 < L) (i n k : ℕ)
         (if n = k ∧ i = 0 then 1 else 0))
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_cos_cos_cos (L : ℝ) (hL : 0 < L) (i j k : ℕ) :
@@ -659,7 +659,7 @@ theorem integral_cos_cos_cos (L : ℝ) (hL : 0 < L) (i j k : ℕ) :
         L / 4 * (if k = 0 ∧ i = 0 ∧ j = 0 then 1 else 0)
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_cos_cos_sin_sin (L : ℝ) (hL : 0 < L) (i j n k : ℕ)
@@ -692,7 +692,7 @@ for $k\ge0$,
 and the two-sine and three-series identities of the headline rows hold with summability hypotheses in place of $\ell^1$ membership.
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cosine_sine_sine (L : ℝ) (hL : 0 < L) (u : ℕ → ℝ)
@@ -705,7 +705,7 @@ theorem cosine_sine_sine (L : ℝ) (hL : 0 < L) (u : ℕ → ℝ)
         (if n = k then u 0 else 0))
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem two_cosines_two_sines (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
@@ -733,7 +733,7 @@ theorem two_cosines_two_sines (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
             u p.1.1 * v p.1.2))
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cos_cos_cos (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
@@ -749,7 +749,7 @@ theorem cos_cos_cos (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
         L / 4 * (if k = 0 then u 0 * v 0 else 0)
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cos_cos_cos_cos (L : ℝ) (hL : 0 < L) (u v w : ℕ → ℝ)
@@ -778,7 +778,7 @@ theorem cos_cos_cos_cos (L : ℝ) (hL : 0 < L) (u v w : ℕ → ℝ)
         L / 8 * (if k = 0 then u 0 * v 0 * w 0 else 0)
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cosine_sine_sine_lp (L : ℝ) (hL : 0 < L)
@@ -791,7 +791,7 @@ theorem cosine_sine_sine_lp (L : ℝ) (hL : 0 < L)
         (if n = k then u 0 else 0))
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cos_cos_cos_lp (L : ℝ) (hL : 0 < L) (u v : lp (fun _ : ℕ => ℝ) 1)
@@ -821,7 +821,7 @@ Let $\sum_n|u_n|<\infty$ and let $\kappa$ be continuous with $|\kappa|\le C$. Th
 the series on the left converging.
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem hasSum_intervalIntegral_cosine (a b L : ℝ) (u : ℕ → ℝ)
@@ -849,7 +849,7 @@ Under the hypotheses of the $W^{2,1}$ rows, with $w''=(w')'$ (which exists a.e. 
 \[w_k=-\Big(\frac{L}{k\pi}\Big)^2\frac2L\int_0^Lw''(x)\cos\frac{k\pi x}{L}\,dx,\qquad|w_k|\le\frac{2L}{\pi^2}\Big(\int_0^L|w''|\Big)\frac1{k^2}.\]
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem cosineCoeff_eq_neg_mul_secondDeriv (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
@@ -864,7 +864,7 @@ theorem cosineCoeff_eq_neg_mul_secondDeriv (L : ℝ) (hL : 0 < L) {w w' : ℝ �
           deriv w' x * Real.cos ((k : ℝ) * Real.pi * x / L))
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem abs_cosineCoeff_le (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
@@ -890,7 +890,7 @@ theorem abs_cosineCoeff_le (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
 Under the hypotheses of the $H^2$ row, $\sum_{k\ge0}|w_k|<\infty$.
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem H2.summable_norm_cosineCoeff {L : ℝ} (hL : 0 < L) {w w₁ w₂ : ℝ → ℝ}
@@ -921,7 +921,7 @@ Let $L>0$, $k\in\mathbb N$, $R_0\in L^1(0,L)$ and $R_1$ with $R_1(0)=R_1(L)=0$, 
 \[\Big|\int_0^L\big(R_0(x)+R_1'(x)\big)\cos\frac{k\pi x}{L}\,dx\Big|\le(L+k\pi)B.\]
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem abs_integral_source_add_deriv_mul_cos_le {L B : ℝ} (hL : 0 < L) (k : ℕ) {R0 R1 dR1 : ℝ → ℝ}
@@ -932,7 +932,7 @@ theorem abs_integral_source_add_deriv_mul_cos_le {L B : ℝ} (hL : 0 < L) (k : �
     |∫ x in (0 : ℝ)..L, (R0 x + dR1 x) * cos (k * π * x / L)| ≤ (L + k * π) * B
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous {L B : ℝ} (hL : 0 < L) (k : ℕ)
@@ -954,7 +954,7 @@ theorem abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous {L B : 
 Let $\lambda_n^N=\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}$ and $N\ge1$. If $L\neq0$ and $n\ge1$, then $\lambda_n^N=(n\pi/L)^2\operatorname{sinc}^2\frac{n\pi}{2N}$; if $L\neq0$ and $n<k\le N$, then $\lambda_n^N<\lambda_k^N$; if $L>0$ and $1\le n\le N$, then $\lambda_1^N\le\lambda_n^N$; and if $L>0$ and $n\le N$, then $\lambda_n^N\ge4n^2/L^2$.
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteNeumannEigenvalue_eq_mul_sinc_sq (L : ℝ) (n N : ℕ)
@@ -963,7 +963,7 @@ theorem discreteNeumannEigenvalue_eq_mul_sinc_sq (L : ℝ) (n N : ℕ)
       ((n : ℝ) * Real.pi / L) ^ 2 * Real.sinc ((n : ℝ) * Real.pi / (2 * (N : ℝ))) ^ 2
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteNeumannEigenvalue_one_le (L : ℝ) (n N : ℕ)
@@ -972,7 +972,7 @@ theorem discreteNeumannEigenvalue_one_le (L : ℝ) (n N : ℕ)
       4 / (L / (N : ℝ)) ^ 2 * Real.sin ((n : ℝ) * Real.pi / (2 * (N : ℝ))) ^ 2
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteNeumannEigenvalue_lower_bound (L : ℝ) (n N : ℕ)
@@ -980,7 +980,7 @@ theorem discreteNeumannEigenvalue_lower_bound (L : ℝ) (n N : ℕ)
     4 * (n : ℝ) ^ 2 / L ^ 2 ≤ 4 / (L / (N : ℝ)) ^ 2 * Real.sin ((n : ℝ) * Real.pi / (2 * (N : ℝ))) ^ 2
 ```
 
-**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/067501d7208cc9f8bf0706b78b0080ea9b965b54/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem discreteNeumannEigenvalue_lt_of_lt (L : ℝ) (N n k : ℕ) (hL : L ≠ 0) (hN : 0 < N)
@@ -1001,17 +1001,19 @@ The full account of what each check covers and what it takes on trust is lean-pk
 
 ## How this was checked
 
-- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 37 of 37 required claim(s) verified (`sha256:0bf2e7ccfc7e4d18…`).
-- Build check (`lean-pkg gate`) at commit `067501d7208c`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
-- Statement comparison (comparator) at commit `067501d7208c`: 2 configuration(s), 50 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
+- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 37 of 37 required claim(s) verified (`sha256:0d19b11488fb5018…`).
+- Build check (`lean-pkg gate`) at commit `d16a23572ff3`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
+- Statement comparison (comparator) at commit `d16a23572ff3`: 2 configuration(s), 50 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
 
 ### Receipts
 
 | Receipt | Check | Commit | Date | Job | SHA-256 |
 |---|---|---|---|---|---|
-| `.lean-receipts/067501d7208c-comparator.json` (used here) | statement comparison | `067501d7208c` | 2026-10-19 | — | `5b8436270bc250f695edf2f13e97eefa848376bce725d83ed290b52106209321` |
-| `.lean-receipts/067501d7208c-slurm-5586731.json` (used here) | build | `067501d7208c` | 2026-10-19 | slurm-5586731 | `85cf8579bd4ebe1d53944c36ee5ab85da7d1353274cff8894ac42aace8bfbe51` |
+| `.lean-receipts/067501d7208c-comparator.json` | statement comparison | `067501d7208c` | 2026-10-19 | — | `5b8436270bc250f695edf2f13e97eefa848376bce725d83ed290b52106209321` |
+| `.lean-receipts/067501d7208c-slurm-5586731.json` | build | `067501d7208c` | 2026-10-19 | slurm-5586731 | `85cf8579bd4ebe1d53944c36ee5ab85da7d1353274cff8894ac42aace8bfbe51` |
 | `.lean-receipts/067501d7208c-slurm-5586732.json` | build | `067501d7208c` | 2026-10-19 | slurm-5586732 | `b85eeed33282a6628c3037f22267ef7eb15bcc381a181e5035c51c04e698736e` |
+| `.lean-receipts/d16a23572ff3-comparator.json` (used here) | statement comparison | `d16a23572ff3` | 2026-10-20 | — | `061fc14a7dd9bec9affd0f4627d886543072545f5246ef6e0806e89954a76414` |
+| `.lean-receipts/d16a23572ff3-slurm-5587231.json` (used here) | build | `d16a23572ff3` | 2026-10-20 | slurm-5587231 | `f614ce7a071d6417e8c6b59fcf5a9aa4b284aecd4080326580364d67b14c0fdf` |
 
 *(used here)*: the receipt the lean-pkg registry holds for this package, which the lines above read. SHA-256 is of the file as committed.
 
@@ -1023,7 +1025,7 @@ The full account of what each check covers and what it takes on trust is lean-pk
 ```bash
 git clone https://github.com/chenle02/neumann-cosine-lean
 cd neumann-cosine-lean
-git checkout 067501d7208cc9f8bf0706b78b0080ea9b965b54   # the commit the build check binds
+git checkout d16a23572ff3212856109dda2010668ed7adbf73   # the commit the build check binds
 lake exe cache get
 lake build
 ```

@@ -46,9 +46,9 @@ status:
   - Quot.sound
   - propext
   evidence:
-    commit: 067501d7208cc9f8bf0706b78b0080ea9b965b54
-    gate_receipt: .lean-receipts/067501d7208c-slurm-5586731.json
-    comparator_receipt: .lean-receipts/067501d7208c-comparator.json
+    commit: d16a23572ff3212856109dda2010668ed7adbf73
+    gate_receipt: .lean-receipts/d16a23572ff3-slurm-5587231.json
+    comparator_receipt: .lean-receipts/d16a23572ff3-comparator.json
   main_results:
   - comparator_config: comparator.headline.json
     declaration: NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode
