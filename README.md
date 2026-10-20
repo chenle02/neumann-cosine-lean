@@ -210,13 +210,13 @@ review. Mathlib retains its own notices (see [NOTICE](NOTICE)).
 
 Neumann cosine modes on \[0, L\]: Gram values, closed-form product integrals, absolutely summable cosine expansions of W^{2,1} and H^2 functions with Neumann data, one-dimensional weak derivatives, and the discrete Neumann Laplacian with its convergence to the continuum spectrum.
 
-- Main results: 20; verified: 0 of 20.
+- Main results: 20; verified: 20 of 20.
 
 ## Main results
 
 ### Orthogonality and Gram values of the Neumann cosine modes
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -238,7 +238,7 @@ theorem integral_mode_mul_mode (L : ℝ) (hL : 0 < L) (m n : ℕ) :
 
 ### Closed form of the integral of four cosine modes
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -269,7 +269,7 @@ theorem integral_cos_cos_cos_cos (L : ℝ) (hL : 0 < L) (i j l k : ℕ) :
 
 ### Integral of a product of three cosine series against a cosine
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -311,7 +311,7 @@ theorem cos_cos_cos_cos_lp (L : ℝ) (hL : 0 < L)
 
 ### Integral of two cosine series against two sines
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -352,7 +352,7 @@ theorem two_cosines_two_sines_lp (L : ℝ) (hL : 0 < L)
 
 ### Cosine coefficients of W^{2,1} Neumann functions are absolutely summable
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -378,7 +378,7 @@ theorem summable_norm_cosineCoeff (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
 
 ### Pointwise cosine expansion of W^{2,1} Neumann functions
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -406,7 +406,7 @@ theorem hasSum_cosineCoeff (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
 
 ### The du Bois-Reymond lemma on an interval
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -428,7 +428,7 @@ theorem ae_eq_const_of_integral_mul_deriv_eq_zero {L : ℝ} (hL : 0 < L) {h : �
 
 ### W^{1,1} functions have an absolutely continuous representative
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -452,7 +452,7 @@ theorem HasWeakDeriv.ae_eq_primitive {L : ℝ} (hL : 0 < L) {w g : ℝ → ℝ}
 
 ### Cosine expansion of H^2 functions with Neumann trace
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -486,7 +486,7 @@ theorem H2.hasSum_cosineCoeff {L : ℝ} (hL : 0 < L) {w w₁ w₂ : ℝ → ℝ}
 
 ### Cosine eigenbasis of the discrete Neumann Laplacian
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -530,7 +530,7 @@ theorem discreteCosineModes_linearIndependent (L : ℝ) (N : ℕ) (hL : L ≠ 0)
 
 ### Discrete Neumann eigenvalues converge to the continuum ones
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -552,7 +552,7 @@ theorem discreteNeumannEigenvalue_tendsto (L : ℝ) (n : ℕ) (hL : 0 < L) (hn :
 
 ### Discrete modal minimum converges to the continuum infimum
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -576,7 +576,7 @@ theorem discreteModalMin_tendsto (f : ℝ → ℝ) (K L : ℝ) (hK : 0 < K) (hL 
 
 ### Normalized projections of the Neumann modes
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -622,7 +622,7 @@ theorem normalized_integral_mode_pow_four (L : ℝ) (n : ℕ) (hL : 0 < L) (hn :
 
 ### Closed forms of the three-cosine and cosine-sine kernels
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -680,7 +680,7 @@ theorem integral_cos_cos_sin_sin (L : ℝ) (hL : 0 < L) (i j n k : ℕ)
 
 ### Product identities for absolutely summable cosine series
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -811,7 +811,7 @@ theorem cos_cos_cos_lp (L : ℝ) (hL : 0 < L) (u v : lp (fun _ : ℕ => ℝ) 1)
 
 ### Termwise integration of a cosine series
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -840,7 +840,7 @@ theorem hasSum_intervalIntegral_cosine (a b L : ℝ) (u : ℕ → ℝ)
 
 ### Quadratic decay of the cosine coefficients
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -882,7 +882,7 @@ theorem abs_cosineCoeff_le (L : ℝ) (hL : 0 < L) {w w' : ℝ → ℝ}
 
 ### Summable cosine coefficients of H^2 functions with Neumann trace
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -912,7 +912,7 @@ theorem H2.summable_norm_cosineCoeff {L : ℝ} (hL : 0 < L) {w w₁ w₂ : ℝ �
 
 ### Cosine projection of a divergence-form source
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -946,7 +946,7 @@ theorem abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous {L B : 
 
 ### Discrete Neumann eigenvalues: sinc form, ordering and lower bound
 
-**Not yet verified.** lean-pkg's record of the checks says: open. Until it says verified, read the Lean statement below as work in progress.
+**Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
 **In words.**
 
@@ -1001,7 +1001,7 @@ The full account of what each check covers and what it takes on trust is lean-pk
 
 ## How this was checked
 
-- lean-pkg's claims ledger: **open**, not every required claim is closed by the recorded receipts; 0 of 37 required claim(s) verified (`sha256:12e83f778cfab60b…`).
+- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 37 of 37 required claim(s) verified (`sha256:0bf2e7ccfc7e4d18…`).
 - Build check (`lean-pkg gate`) at commit `067501d7208c`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
 - Statement comparison (comparator) at commit `067501d7208c`: 2 configuration(s), 50 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
 

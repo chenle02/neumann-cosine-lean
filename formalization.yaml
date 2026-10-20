@@ -1,0 +1,1461 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# Rendered by `lean-pkg formalization <name>` from the lean-pkg registry and the package
+# repository at HEAD (formalization.yaml v0.4, mathlib-initiative). Paths are
+# repository-relative. Derived keys are regenerated on every run: version, project.name,
+# project.license, automation.notes, status.sorry_count, status.axioms, status.evidence,
+# status.main_results, and alignment when claims.yaml is tracked. Every other key is kept
+# from this file. A value starting "[PLACEHOLDER]" is data the registry does not hold:
+# fill it in by hand (it is kept) or set the registry field it names.
+version: v0.4
+project:
+  name: neumann-cosine-lean
+  description: Lean 4 / Mathlib library on Neumann cosine series on an interval [0,L] and the discrete
+    Neumann Laplacian -- orthogonality and product integrals of cosine modes, summable cosine coefficients
+    and pointwise expansions under W^{2,1} or H^2 Neumann data, a divergence-form projection identity,
+    the eigenvalues of the discrete Neumann Laplacian and convergence of its modal minimum. Classical
+    analysis; no new mathematics is claimed.
+  authors:
+  - Le Chen
+  license: Apache-2.0
+sources:
+- title: 'Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation
+    and spike-like solutions'
+  authors:
+  - Le Chen
+  - Ian Ruau
+  - Wenxian Shen
+  id: arXiv:2610.20976
+  type: article
+  relationship: background
+  note: The library was first developed for the Lean companion of this paper and keeps only the general
+    mathematics; nothing in it depends on the paper. It does not formalize the paper's theorems.
+related_formalizations:
+- id: https://github.com/leanprover-community/mathlib4
+  relationship: builds-on
+  note: pinned in lake-manifest.json
+status:
+  scope: 'Formalized: the cosine-mode integrals, coefficient summability and pointwise Neumann cosine
+    expansions on [0,L] (L>0) under W^{2,1} or H^2 Neumann data, the H^2 Neumann weak-derivative interface,
+    the divergence-form projection bound, and the discrete Neumann Laplacian spectrum with its modal-minimum
+    tail and limit. Excluded: PDE theory (existence, uniqueness, regularity, semigroups), L^2 completeness
+    of the cosine system and Parseval for general L^2 functions, a general bridge to Mathlib fourierCoeff
+    (planned for v0.2), and domains in two or more dimensions.'
+  sorry_count: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  evidence:
+    commit: 067501d7208cc9f8bf0706b78b0080ea9b965b54
+    gate_receipt: .lean-receipts/067501d7208c-slurm-5586731.json
+    comparator_receipt: .lean-receipts/067501d7208c-comparator.json
+  main_results:
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto
+    file: NeumannCosine/HeadlineSolution.lean
+    challenge_file: NeumannCosine/HeadlineChallenge.lean
+automation:
+  methods:
+  - method: agent
+    framework: Claude Code
+    prompting_notes: Lean proof drafting, extraction from the companion, integration and documentation
+      under Le Chen's direction.
+  - method: agent
+    framework: other
+    prompting_notes: Independent read-only release and gate reviews by a second AI assistant.
+  notes: AI coding assistants were used for drafting Lean proofs, extraction and documentation under Le
+    Chen's direction, and for independent read-only reviews; every status claim rests on the recorded
+    Lean builds, axiom audits, comparator and Slurm receipts.
+review:
+  status: unchecked
+  notes: 'seeded by lean-pkg formalization: no human review status is recorded in the registry; mechanical
+    evidence (gate and comparator receipts) is listed under status.evidence'
+alignment:
+  generated_from: claims.yaml
+  statements:
+  - source: null
+    lean: NeumannCosine.Coefficients.NeumannW21
+    module: NeumannCosine/Coefficients.lean
+    kind: definition
+    claim: neumann-cosine-lean/coefficients-neumann-w21
+    status: experimental
+    note: 'The class of w ∈ W^{2,1}(0,L) with Neumann data: w absolutely continuous on [0,L] with derivative
+      w'' on (0,L), w'' absolutely continuous, and w''(0) = w''(L) = 0.'
+  - source: null
+    lean: NeumannCosine.Coefficients.NeumannW21.of_contDiff
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-neumann-w21-of-cont-diff
+    status: experimental
+    note: A `C²` function with `w'(0) = w'(L) = 0` lies in the Neumann class (with `w' = deriv w`).
+  - source: null
+    lean: NeumannCosine.Coefficients.abs_cosineCoeff_le
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-abs-cosine-coeff-le
+    status: reusable
+    note: '`|w_k| ≤ (2L/π²) (∫₀ᴸ |w''''|) / k²` for `k ≥ 1`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cos_cos_cos_cos_of_neumann
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cos-cos-cos-cos-of-neumann
+    status: experimental
+    note: '`ProductIdentities.cos_cos_cos_cos` (`k ≥ 0`) for `u, v, w` in the Neumann class, with their
+      cosine coefficients.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cos_cos_cos_of_neumann
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cos-cos-cos-of-neumann
+    status: experimental
+    note: '`ProductIdentities.cos_cos_cos` (`k ≥ 0`) for `u, v` in the Neumann class, with their cosine
+      coefficients.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cosineCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: definition
+    claim: neumann-cosine-lean/coefficients-cosine-coeff
+    status: experimental
+    note: 'The Neumann cosine coefficients: `w_0 = (1/L) ∫₀ᴸ w`, `w_k = (2/L) ∫₀ᴸ w(x) cos(k π x / L)
+      dx` for `k ≥ 1`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cosineCoeff_eq_halfCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cosine-coeff-eq-half-coeff
+    status: experimental
+    note: '`w_0 = ŵ_0` and `w_k = 2 ŵ_k` for `k ≥ 1`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cosine-coeff-eq-neg-mul-second-deriv
+    status: reusable
+    note: For `k ≥ 1` the cosine coefficient of `w` is `-(L/(kπ))²` times the corresponding coefficient
+      of `w''`.
+  - source: null
+    lean: NeumannCosine.Coefficients.cosineCoeff_of_ne_zero
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cosine-coeff-of-ne-zero
+    status: experimental
+    note: For `k ≥ 1`, `w_k = (2/L) ∫₀ᴸ w(x) cos(k π x / L) dx`.
+  - source: null
+    lean: NeumannCosine.Coefficients.cosineCoeff_zero
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cosine-coeff-zero
+    status: experimental
+    note: 'The zero mode is the mean: `w_0 = (1/L) ∫₀ᴸ w`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.cosine_sine_sine_of_neumann
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-cosine-sine-sine-of-neumann
+    status: experimental
+    note: '`ProductIdentities.cosine_sine_sine` for `u` in the Neumann class, with its cosine coefficients
+      `u_i`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.evenExt
+    module: NeumannCosine/Coefficients.lean
+    kind: definition
+    claim: neumann-cosine-lean/coefficients-even-ext
+    status: experimental
+    note: The even extension `x ↦ w |x|`, complexified.
+  - source: null
+    lean: NeumannCosine.Coefficients.evenPeriodic
+    module: NeumannCosine/Coefficients.lean
+    kind: definition
+    claim: neumann-cosine-lean/coefficients-even-periodic
+    status: experimental
+    note: The even `2L`-periodic extension of `w`, as a continuous function on the circle `ℝ / 2Lℤ`.
+  - source: null
+    lean: NeumannCosine.Coefficients.evenPeriodic_apply
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-even-periodic-apply
+    status: experimental
+    note: '`w x` for `x ∈ [0, L]` is the value of the even periodic extension.'
+  - source: null
+    lean: NeumannCosine.Coefficients.fourierCoeff_evenPeriodic
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-fourier-coeff-even-periodic
+    status: experimental
+    note: The `n`-th Fourier coefficient on `ℝ / 2Lℤ` of the even extension is `(1/L) ∫₀ᴸ w(x) cos(n π
+      x / L) dx`.
+  - source: null
+    lean: NeumannCosine.Coefficients.halfCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: definition
+    claim: neumann-cosine-lean/coefficients-half-coeff
+    status: experimental
+    note: The half-normalized coefficient `(1/L) ∫₀ᴸ w(x) cos(n π x / L) dx`, `n ∈ ℤ`; it is the `n`-th
+      complex Fourier coefficient of the even `2L`-periodic extension of `w`.
+  - source: null
+    lean: NeumannCosine.Coefficients.halfCoeff_neg
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-half-coeff-neg
+    status: experimental
+    note: Evenness of the half-normalized coefficient in the integer index.
+  - source: null
+    lean: NeumannCosine.Coefficients.hasSum_cosineCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-has-sum-cosine-coeff
+    status: reusable
+    note: Cosine expansion. For `w` in the Neumann class and `x ∈ [0, L]`, `w(x) = ∑_{k ≥ 0} w_k cos(k
+      π x / L)`, and the series converges absolutely.
+  - source: null
+    lean: NeumannCosine.Coefficients.integral_mul_cos_eq
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-integral-mul-cos-eq
+    status: experimental
+    note: 'Two integrations by parts against `cos (ω x)` with `sin (ω L) = 0`: `∫₀ᴸ w cos(ωx) = -(1/ω²)
+      ∫₀ᴸ w'''' cos(ωx)`, using the Neumann data.'
+  - source: null
+    lean: NeumannCosine.Coefficients.summable_halfCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-summable-half-coeff
+    status: experimental
+    note: The half-normalized coefficients are summable over `ℤ`.
+  - source: null
+    lean: NeumannCosine.Coefficients.summable_norm_cosineCoeff
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-summable-norm-cosine-coeff
+    status: reusable
+    note: 'The Neumann cosine coefficients of `w` are absolutely summable: `{w_k} ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.Coefficients.tsum_cosineCoeff_eq
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-tsum-cosine-coeff-eq
+    status: experimental
+    note: On `[0, L]` the function equals its cosine series.
+  - source: null
+    lean: NeumannCosine.Coefficients.two_cosines_two_sines_of_neumann
+    module: NeumannCosine/Coefficients.lean
+    kind: theorem
+    claim: neumann-cosine-lean/coefficients-two-cosines-two-sines-of-neumann
+    status: experimental
+    note: '`ProductIdentities.two_cosines_two_sines` for `u, v` in the Neumann class, with their cosine
+      coefficients.'
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-half-angle
+    status: experimental
+    note: The half angle `n * π / (2 * N)` in the discrete eigenvalue.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_mem_Icc
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-half-angle-mem-icc
+    status: experimental
+    note: For a mode `n ≤ N`, the half angle lies in `[0, π / 2]`.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_one_le
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-half-angle-one-le
+    status: experimental
+    note: The half angle of the first mode is no larger than that of any positive mode.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_tendsto_zero
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-half-angle-tendsto-zero
+    status: experimental
+    note: For a fixed mode, the half angle tends to zero as the mesh is refined.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue
+    status: experimental
+    note: The discrete Neumann eigenvalue of the three-point Laplacian with mesh width `h = L / N`.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-eq-mul-sinc-sq
+    status: reusable
+    note: The discrete eigenvalue is the continuum eigenvalue times `sinc ^ 2` of the half angle.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-lower-bound
+    status: reusable
+    note: Concavity of the sine on `[0, π / 2]` gives the uniform quadratic lower bound `4 * n ^ 2 / L
+      ^ 2` for the discrete eigenvalues.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-one-le
+    status: reusable
+    note: Among the modes `1 ≤ n ≤ N`, the first mode has the smallest discrete eigenvalue.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-discrete-neumann-eigenvalue-tendsto
+    status: reusable
+    note: For a fixed mode, the discrete eigenvalue converges to the continuum one.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.exists_forall_le_of_tendsto_atTop
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-exists-forall-le-of-tendsto-at-top
+    status: experimental
+    note: A real sequence indexed by the natural numbers and tending to `+∞` attains a global minimum.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-eigenvalues-neumann-eigenvalue
+    status: experimental
+    note: The continuum Neumann eigenvalue `(n * π / L) ^ 2`.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_pos
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-neumann-eigenvalue-pos
+    status: experimental
+    note: Every positive-mode continuum Neumann eigenvalue is positive.
+  - source: null
+    lean: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_succ_tendsto_atTop
+    module: NeumannCosine/Discrete/Eigenvalues.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-eigenvalues-neumann-eigenvalue-succ-tendsto-at-top
+    status: experimental
+    note: The continuum Neumann eigenvalues along the positive modes diverge.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.Grid
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-grid
+    status: experimental
+    note: The grid points `0, 1, …, N`.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.GridFunction
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-grid-function
+    status: experimental
+    note: Real functions on the grid.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.cos_reflected_right_identity
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-cos-reflected-right-identity
+    status: experimental
+    note: Reflected second difference of the cosine at a multiple of `π`.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.cos_step_identity
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-cos-step-identity
+    status: experimental
+    note: Second difference of the cosine.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineBasis
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-basis
+    status: experimental
+    note: The discrete cosine modes form a basis of all grid functions.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineMode
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-mode
+    status: experimental
+    note: The discrete cosine mode `i ↦ cos (n * π * i / N)`.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-mode-exhaustion
+    status: reusable
+    note: Every grid function is a finite linear combination of the discrete cosine modes.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineMode_hasEigenvector
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-mode-has-eigenvector
+    status: experimental
+    note: Every discrete cosine mode `n ≤ N` is a nonzero eigenvector of the reflected stencil.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineMode_ne_zero
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-mode-ne-zero
+    status: experimental
+    note: A discrete cosine mode is not the zero function.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-cosine-modes-linear-independent
+    status: reusable
+    note: The `N + 1` discrete cosine modes are linearly independent.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_injective
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-neumann-eigenvalue-injective
+    status: experimental
+    note: Distinct grid indices have distinct discrete eigenvalues.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-discrete-neumann-eigenvalue-lt-of-lt
+    status: reusable
+    note: The discrete eigenvalues are strictly increasing in the mode index on `0 ≤ n ≤ N`.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.meshWidth
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-mesh-width
+    status: experimental
+    note: The mesh width `L / N`.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-reflected-neg-laplacian
+    status: experimental
+    note: The reflected three-point negative Laplacian as a linear map.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacianApply
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-reflected-neg-laplacian-apply
+    status: experimental
+    note: Pointwise value of the reflected three-point negative Laplacian.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-laplacian-reflected-neg-laplacian-cosine-eigenpair
+    status: reusable
+    note: Each discrete cosine mode `n ≤ N` is an eigenfunction of the reflected stencil with the discrete
+      Neumann eigenvalue.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.reflectedNext
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-reflected-next
+    status: experimental
+    note: Right neighbour, reflected at the right endpoint.
+  - source: null
+    lean: NeumannCosine.Discrete.Laplacian.reflectedPrev
+    module: NeumannCosine/Discrete/Laplacian.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-laplacian-reflected-prev
+    status: experimental
+    note: Left neighbour, reflected at the left endpoint.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-continuum-modal-inf
+    status: experimental
+    note: Continuum modal infimum of `f` over all modes `n ≥ 1`.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf_eq_finset_inf'
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-continuum-modal-inf-eq-finset-inf
+    status: experimental
+    note: A continuum tail estimate identifies the infimum over all positive modes with a finite minimum.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-discrete-modal-min
+    status: experimental
+    note: Discrete modal minimum of `f` over the modes `1 ≤ n ≤ N`, with value `0` when `N = 0`.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-discrete-modal-min-tendsto
+    status: reusable
+    note: Modal-minimum convergence. If `f` is continuous at every positive point and `K * x ≤ f x` for
+      `x > 0` with `K > 0`, then the discrete minimum over the modes `1 ≤ n ≤ N` converges to the continuum
+      infimum over the modes `n ≥ 1`.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.positiveModes
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: definition
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-positive-modes
+    status: experimental
+    note: The positive modes `1, …, N` represented on a mesh with `N` intervals.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumLimit.positiveModes_nonempty
+    module: NeumannCosine/Discrete/ModalMinimumLimit.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-limit-positive-modes-nonempty
+    status: experimental
+    note: For N ≥ 1 the set of positive modes {1, …, N} is nonempty.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumTail.comp_discreteNeumannEigenvalue_tendsto
+    module: NeumannCosine/Discrete/ModalMinimumTail.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-tail-comp-discrete-neumann-eigenvalue-tendsto
+    status: experimental
+    note: For a map continuous at positive points, its values at the discrete eigenvalues of a fixed mode
+      converge to its value at the continuum eigenvalue.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumTail.exists_quadratic_tail
+    module: NeumannCosine/Discrete/ModalMinimumTail.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-tail-exists-quadratic-tail
+    status: experimental
+    note: A positive quadratic sequence eventually exceeds any prescribed bound.
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_continuum_tail
+    module: NeumannCosine/Discrete/ModalMinimumTail.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-tail-exists-uniform-continuum-tail
+    status: experimental
+    note: 'Uniform continuum cutoff: every mode `n > k` has a value strictly larger than the first mode.'
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_discrete_tail
+    module: NeumannCosine/Discrete/ModalMinimumTail.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-tail-exists-uniform-discrete-tail
+    status: experimental
+    note: 'Uniform discrete cutoff: for all sufficiently fine meshes, every mode `k < n ≤ N` has a value
+      strictly larger than the first mode.'
+  - source: null
+    lean: NeumannCosine.Discrete.ModalMinimumTail.finset_inf'_eq_of_tail
+    module: NeumannCosine/Discrete/ModalMinimumTail.lean
+    kind: theorem
+    claim: neumann-cosine-lean/discrete-modal-minimum-tail-finset-inf-eq-of-tail
+    status: experimental
+    note: A finite minimum is unchanged after removing indices whose values are at least that of a retained
+      index.
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_add_mul_cos_le_of_ibp
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-add-mul-cos-le-of-ibp
+    status: experimental
+    note: 'The estimate shared by the two integration-by-parts forms: once `∫₀ᴸ dR₁ cos = ω ∫₀ᴸ R₁ sin`,
+      the projection is at most `(L + kπ) B`.'
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_le_of_abs_le
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-le-of-abs-le
+    status: experimental
+    note: '`|∫₀ᴸ f| ≤ L B` when `|f| ≤ B` on `[0, L]`.'
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le
+    status: reusable
+    note: 'Projection bound (differentiable `R₁`). For `L > 0` and `k : ℕ`, let `R₁` be continuous on
+      `[0, L]` with derivative `dR₁` on `(0, L)`, `dR₁` interval integrable, `R₁ 0 = R₁ L = 0`, and let
+      `R₀` be interval integrable, with `|R₀|, |R₁| ≤ B` on `[0, L]`.'
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_deriv
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le-deriv
+    status: experimental
+    note: Projection bound (`deriv` form). As `abs_integral_source_add_deriv_mul_cos_le`, with `R₁` differentiable
+      on `(0, L)` and its derivative written `deriv R₁`.
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_example
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le-example
+    status: experimental
+    note: 'Example: the hypotheses of `abs_integral_source_add_deriv_mul_cos_le` hold for `R₀ = 1`, `R₁
+      x = sin(πx/L)` (vanishing at `0` and `L`) with `B = 1`, so the bound is not vacuous.'
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-abs-integral-source-add-deriv-mul-cos-le-of-absolutely-continuous
+    status: reusable
+    note: Projection bound (absolutely continuous `R₁`). As `abs_integral_source_add_deriv_mul_cos_le`,
+      with `R₁` absolutely continuous on `[0, L]` and its derivative `deriv R₁`, which exists almost everywhere
+      and is integrable (Mathlib's `AbsolutelyContinuousOnInterval`).
+  - source: null
+    lean: NeumannCosine.DivergenceFormProjection.integral_deriv_mul_cos
+    module: NeumannCosine/DivergenceFormProjection.lean
+    kind: theorem
+    claim: neumann-cosine-lean/divergence-form-projection-integral-deriv-mul-cos
+    status: experimental
+    note: 'Integration by parts against the cosine mode, with vanishing boundary values: `∫₀ᴸ dR₁ cos(ωx)
+      dx = ω ∫₀ᴸ R₁ sin(ωx) dx`, `ω = kπ/L`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.continuous_intMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-continuous-int-mode
+    status: experimental
+    note: The signed-index cosine x ↦ cos(mπx/L), m ∈ ℤ, is continuous.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.cos_cos_cos_cos_eq
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-cos-cos-cos-cos-eq
+    status: experimental
+    note: '`cos_i cos_j cos_l cos_k` as a signed eight-term cosine combination.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.cos_cos_cos_eq
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-cos-cos-cos-eq
+    status: experimental
+    note: '`cos_i cos_j cos_k` as a signed four-term cosine combination.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.cos_cos_sin_sin_eq
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-cos-cos-sin-sin-eq
+    status: experimental
+    note: '`cos_i cos_j sin_n sin_k` as a signed eight-term cosine combination.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.cos_sin_sin_eq
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-cos-sin-sin-eq
+    status: experimental
+    note: '`cos_i sin_n sin_k` as a signed four-term cosine combination.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.indicatorR
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: definition
+    claim: neumann-cosine-lean/kernel-integrals-indicator-r
+    status: experimental
+    note: Real-valued indicator of a decidable proposition.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.intMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: definition
+    claim: neumann-cosine-lean/kernel-integrals-int-mode
+    status: experimental
+    note: The cosine with a signed integer index, `cos (m π x / L)`, `m ∈ ℤ`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos
+    status: reusable
+    note: 'The three-cosine kernel: for all `k ≥ 0`, the coefficient of `u_i v_j` is `(L/4)(1_{i-j=k}
+      + 1_{i-j=-k} + 1_{i+j=k}) + (L/4) 1_{k=0} 1_{i=0} 1_{j=0}`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-cos
+    status: reusable
+    note: 'The four-cosine kernel: for all `k ≥ 0`, the coefficient of `u_i v_j w_l` is `(L/8)` times
+      seven signed indicators plus `(L/8) 1_{k=0} 1_{i=j=l=0}`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_signed
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-cos-signed
+    status: experimental
+    note: Signed form of the four-cosine kernel; valid for all `i j l k`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_zero_mode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-cos-zero-mode
+    status: experimental
+    note: Without `1_{k=0} u_0 v_0 w_0`, the four-cosine kernel at `i = j = l = k = 0` would be `7L/8`;
+      the true value is `L`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_signed
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-signed
+    status: experimental
+    note: Signed form of the three-cosine kernel; valid for all `i j k`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_zero_mode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-cos-zero-mode
+    status: experimental
+    note: Without `1_{k=0} u_0 v_0`, the three-cosine kernel at `i = j = k = 0` would be `3L/4`; the true
+      value is `L`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-sin-sin
+    status: reusable
+    note: 'The two-cosine/two-sine kernel: for `n, k ≥ 1`, the coefficient of `u_i v_j` is `(L/8)` times
+      seven signed indicators. The eighth product-to-sum term `i+j = -(n+k)` vanishes because `n + k ≥
+      2`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin_signed
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-cos-sin-sin-signed
+    status: experimental
+    note: Signed form of the two-cosine/two-sine kernel; valid for all `i j n k`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_sin_sin
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-sin-sin
+    status: reusable
+    note: 'The one-cosine/two-sine kernel: for `n, k ≥ 1`, the coefficient of `u_i` is `(L/4)(1_{i=|n-k|}
+      - 1_{i=n+k} + δ_{nk} 1_{i=0})`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_sin_sin_signed
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-sin-sin-signed
+    status: experimental
+    note: Signed form of the one-cosine/two-sine kernel; valid for all `i n k`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_cos_sin_sin_zero_mode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-cos-sin-sin-zero-mode
+    status: experimental
+    note: Without `δ_{nk} u_0`, the one-cosine/two-sine kernel at `i = 0`, `n = k = 1` would be `L/4`;
+      the true value is `L/2`.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_eight_intMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-eight-int-mode
+    status: experimental
+    note: Integral of an eight-term signed cosine combination.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_four_intMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-four-int-mode
+    status: experimental
+    note: Integral of a four-term signed cosine combination.
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.integral_intMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: theorem
+    claim: neumann-cosine-lean/kernel-integrals-integral-int-mode
+    status: experimental
+    note: 'Basic kernel: `∫₀ᴸ cos (m π x / L) dx = L · 1_{m = 0}` for `m ∈ ℤ`.'
+  - source: null
+    lean: NeumannCosine.KernelIntegrals.sinMode
+    module: NeumannCosine/KernelIntegrals.lean
+    kind: definition
+    claim: neumann-cosine-lean/kernel-integrals-sin-mode
+    status: experimental
+    note: The sine mode `sin (n π x / L)`. Up to the factor `-n π / L`, it is the derivative of the Neumann
+      mode `cos (n π x / L)`.
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cos_cos_cos
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cos-cos-cos
+    status: reusable
+    note: Two cosine series against one cosine mode (`k ≥ 0`).
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cos_cos_cos_cos
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cos-cos-cos-cos
+    status: reusable
+    note: Three cosine series against one cosine mode (`k ≥ 0`).
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cos-cos-cos-cos-lp
+    status: reusable
+    note: '`cos_cos_cos_cos` for `u, v, w ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cos_cos_cos_lp
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cos-cos-cos-lp
+    status: reusable
+    note: '`cos_cos_cos` for `u, v ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cosine_sine_sine
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cosine-sine-sine
+    status: reusable
+    note: One cosine series against two sine modes (`n, k ≥ 1`).
+  - source: null
+    lean: NeumannCosine.ProductIdentities.cosine_sine_sine_lp
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-cosine-sine-sine-lp
+    status: reusable
+    note: '`cosine_sine_sine` for `u ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.ProductIdentities.kernel_cos_cos_cos
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-kernel-cos-cos-cos
+    status: experimental
+    note: 'Kernel form of the three-cosine integral: ∫₀ᴸ cos_i cos_j cos_k as signed indicators of i ±
+      j = ±k, arranged for the constrained convolution sums.'
+  - source: null
+    lean: NeumannCosine.ProductIdentities.kernel_cos_cos_cos_cos
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-kernel-cos-cos-cos-cos
+    status: experimental
+    note: 'Kernel form of the four-cosine integral: ∫₀ᴸ cos_i cos_j cos_l cos_k as signed indicators,
+      arranged for the triple convolution sums.'
+  - source: null
+    lean: NeumannCosine.ProductIdentities.kernel_cos_cos_sin_sin
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-kernel-cos-cos-sin-sin
+    status: experimental
+    note: Kernel form of the two-cosine/two-sine integral ∫₀ᴸ cos_i cos_j sin_n sin_k for n, k ≥ 1, arranged
+      for the convolution sums.
+  - source: null
+    lean: NeumannCosine.ProductIdentities.kernel_cos_sin_sin
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-kernel-cos-sin-sin
+    status: experimental
+    note: Kernel form of the one-cosine/two-sine integral ∫₀ᴸ cos_i sin_n sin_k for n, k ≥ 1.
+  - source: null
+    lean: NeumannCosine.ProductIdentities.two_cosines_two_sines
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-two-cosines-two-sines
+    status: reusable
+    note: Two cosine series against two sine modes (`n, k ≥ 1`).
+  - source: null
+    lean: NeumannCosine.ProductIdentities.two_cosines_two_sines_lp
+    module: NeumannCosine/ProductIdentities.lean
+    kind: theorem
+    claim: neumann-cosine-lean/product-identities-two-cosines-two-sines-lp
+    status: reusable
+    note: '`two_cosines_two_sines` for `u, v ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.Series.Products.continuous_cos_phase
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-continuous-cos-phase
+    status: experimental
+    note: The cosine x ↦ cos(nπx/L) is continuous.
+  - source: null
+    lean: NeumannCosine.Series.Products.continuous_sin_phase
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-continuous-sin-phase
+    status: experimental
+    note: The sine x ↦ sin(nπx/L) is continuous.
+  - source: null
+    lean: NeumannCosine.Series.Products.cos_cos_cos_cos_of_kernel
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-cos-cos-cos-cos-of-kernel
+    status: experimental
+    note: The four-cosine identity, conditional on the four-cosine kernel integral.
+  - source: null
+    lean: NeumannCosine.Series.Products.cos_cos_cos_of_kernel
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-cos-cos-cos-of-kernel
+    status: experimental
+    note: The three-cosine identity, conditional on the three-cosine kernel integral.
+  - source: null
+    lean: NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-cosine-series-mul-cosine-series
+    status: experimental
+    note: Product of two absolutely summable cosine series, pointwise.
+  - source: null
+    lean: NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries_mul_cosineSeries
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-cosine-series-mul-cosine-series-mul-cosine-series
+    status: experimental
+    note: 'Product of three absolutely summable cosine series, pointwise, indexed by `(i, j, ℓ) : ℕ ×
+      ℕ × ℕ`.'
+  - source: null
+    lean: NeumannCosine.Series.Products.cosine_sine_sine_of_kernel
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-cosine-sine-sine-of-kernel
+    status: experimental
+    note: The one-cosine/two-sine identity, conditional on the one-cosine/two-sine kernel integral (`n,
+      k ≥ 1`). Here `u_{|n-k|}` is `u (Int.natAbs (n - k))` with the difference taken in `ℤ`, and `δ_{nk}
+      u₀` is `if n = k then u 0 else 0`.
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_integral_tsum_mul
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-integral-tsum-mul
+    status: experimental
+    note: 'One series: termwise integration against a bounded continuous kernel, with the coefficient
+      pulled out of each integral.'
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_integral_tsum_mul_tsum
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-integral-tsum-mul-tsum
+    status: experimental
+    note: 'Two series: the product of the separately summed series, integrated against a bounded continuous
+      kernel, is the product-index sum of the coefficient products times the kernel integrals.'
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_mul_ite
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-mul-ite
+    status: experimental
+    note: An absolutely summable family weighted by the indicator of a constraint sums to the constrained
+      sum, i.e. the tsum over the subtype of indices that satisfy the constraint.
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_mul_ite_int_eq
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-mul-ite-int-eq
+    status: experimental
+    note: 'A single-index sum against the indicator of the integer constraint `(i : ℤ) = r` picks out
+      the coefficient `u r` when `r ≥ 0` and is empty otherwise.'
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_neg
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-pair-ite-add-eq-neg
+    status: experimental
+    note: 'The pair constraint `i + j = -k` (integer arithmetic) has the single solution `i = j = k =
+      0`: it contributes `1_{k=0} u₀ v₀`.'
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_of_neg
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-pair-ite-add-eq-of-neg
+    status: experimental
+    note: A pair constraint `i + j = r` with a negative integer `r` has no solutions.
+  - source: null
+    lean: NeumannCosine.Series.Products.hasSum_triple_ite_add_add_eq_neg
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-has-sum-triple-ite-add-add-eq-neg
+    status: experimental
+    note: 'The triple constraint `i + j + ℓ = -k` has the single solution `i = j = ℓ = k = 0`: it contributes
+      `1_{k=0} u₀ v₀ w₀`.'
+  - source: null
+    lean: NeumannCosine.Series.Products.norm_cos_phase_le_one
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-norm-cos-phase-le-one
+    status: experimental
+    note: The cosine cos(nπx/L) has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.Products.norm_cos_phase_mul_le_one
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-norm-cos-phase-mul-le-one
+    status: experimental
+    note: A product of two cosines cos(mπx/L) cos(nπx/L) has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.Products.norm_sin_mul_sin_le_one
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-norm-sin-mul-sin-le-one
+    status: experimental
+    note: A product of two sines sin(nπx/L) sin(kπx/L) has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.Products.norm_sin_phase_le_one
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-norm-sin-phase-le-one
+    status: experimental
+    note: The sine sin(nπx/L) has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.Products.summable_norm_mul_bounded
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-summable-norm-mul-bounded
+    status: experimental
+    note: A coefficient family against factors of norm at most one stays absolutely summable.
+  - source: null
+    lean: NeumannCosine.Series.Products.summable_norm_of_lp_one
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-summable-norm-of-lp-one
+    status: experimental
+    note: '`ℓ¹(ℕ₀)` membership, as Mathlib''s `lp` at exponent `1`, gives the absolute summability hypothesis
+      used throughout this file.'
+  - source: null
+    lean: NeumannCosine.Series.Products.tsum_mul_tsum_bounded
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-tsum-mul-tsum-bounded
+    status: experimental
+    note: The product of two separately summed series with bounded factors equals the tsum over the product
+      index.
+  - source: null
+    lean: NeumannCosine.Series.Products.two_cosines_two_sines_of_kernel
+    module: NeumannCosine/Series/Products.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-products-two-cosines-two-sines-of-kernel
+    status: experimental
+    note: The two-cosine/two-sine identity, conditional on the two-cosine/two-sine kernel integral (`n,
+      k ≥ 1`).
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.TripleIndex
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: definition
+    claim: neumann-cosine-lean/series-termwise-integral-triple-index
+    status: experimental
+    note: Index set for a product of three series.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.boundedPhaseTerm
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: definition
+    claim: neumann-cosine-lean/series-termwise-integral-bounded-phase-term
+    status: experimental
+    note: A coefficient, a uniformly bounded phase, and a bounded kernel.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.continuous_pairMode
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-continuous-pair-mode
+    status: experimental
+    note: The product of two Neumann modes indexed by a pair is continuous in x.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.continuous_tripleMode
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-continuous-triple-mode
+    status: experimental
+    note: The product of three Neumann modes indexed by a triple is continuous in x.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_boundedPhase
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-has-sum-interval-integral-bounded-phase
+    status: experimental
+    note: 'Dominated convergence: absolute summability of the coefficients gives termwise interval integration
+      against a bounded continuous kernel. The conclusion is a `HasSum`. It gives both summability and
+      the value of the sum, not only an equality of `tsum` values.'
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-has-sum-interval-integral-cosine
+    status: reusable
+    note: Termwise integration of one cosine series against a bounded continuous kernel. The kernel may
+      be, for example, a product of two sine modes.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosinePair
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-has-sum-interval-integral-cosine-pair
+    status: experimental
+    note: Termwise integration of the product of two cosine series, indexed by `ℕ × ℕ`. Collecting terms
+      by signed index is done elsewhere.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosineTriple
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-has-sum-interval-integral-cosine-triple
+    status: experimental
+    note: Termwise integration of the product of three cosine series, indexed by `(ℕ × ℕ) × ℕ`.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.norm_pairMode_le_one
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-norm-pair-mode-le-one
+    status: experimental
+    note: The product of two Neumann modes indexed by a pair has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.norm_tripleMode_le_one
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-norm-triple-mode-le-one
+    status: experimental
+    note: The product of three Neumann modes indexed by a triple has norm at most one.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.pairMode
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: definition
+    claim: neumann-cosine-lean/series-termwise-integral-pair-mode
+    status: experimental
+    note: Product of two Neumann modes, indexed by `ℕ × ℕ`.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.summable_boundedPhaseTerm
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-summable-bounded-phase-term
+    status: experimental
+    note: Absolute coefficient summability controls the pointwise series whenever the phase has norm at
+      most one and the kernel has a uniform bound.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.summable_norm_pairCoefficient
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-summable-norm-pair-coefficient
+    status: experimental
+    note: Product coefficients of two absolutely summable sequences are absolutely summable on the product
+      index.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.summable_norm_tripleCoefficient
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: theorem
+    claim: neumann-cosine-lean/series-termwise-integral-summable-norm-triple-coefficient
+    status: experimental
+    note: If u, v, w are absolutely summable then the triple products u_i v_j w_l are absolutely summable
+      over ℕ³.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.tripleCoefficient
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: definition
+    claim: neumann-cosine-lean/series-termwise-integral-triple-coefficient
+    status: experimental
+    note: The triple coefficient (i, j, l) ↦ u_i v_j w_l of three coefficient sequences.
+  - source: null
+    lean: NeumannCosine.Series.TermwiseIntegral.tripleMode
+    module: NeumannCosine/Series/TermwiseIntegral.lean
+    kind: definition
+    claim: neumann-cosine-lean/series-termwise-integral-triple-mode
+    status: experimental
+    note: The product cos(iπx/L) cos(jπx/L) cos(lπx/L) of three Neumann modes indexed by a triple.
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: definition
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2
+    status: experimental
+    note: '`w ∈ H²(0,L)` with weak derivatives `w₁ = w_x`, `w₂ = w_{xx}`: `w, w₁, w₂ ∈ L²(0,L)`, `∫₀ᴸ
+      w φ'' = -∫₀ᴸ w₁ φ` and `∫₀ᴸ w₁ φ'' = -∫₀ᴸ w₂ φ` for every `φ ∈ C_c^∞(0,L)`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2.exists_neumannW21
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2-exists-neumann-w21
+    status: experimental
+    note: '`H²` with Neumann data lies in the Neumann class. If `w ∈ H²(0,L)` (weak derivatives `w₁, w₂`)
+      satisfies the Neumann trace condition `w_x(0) = w_x(L) = 0`, then `w` has a representative `W` with
+      `NeumannW21 L W W''`, where `W = w` and `W'' = w₁` a.e. on `(0,L)`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2-has-sum-cosine-coeff
+    status: reusable
+    note: Cosine expansion. For `w ∈ H²(0,L)` with Neumann data there is a representative `W`, continuous
+      on `[0,L]` and equal to `w` a.e. on `(0,L)`, with `W(x) = ∑_{n ≥ 0} w_n cos(n π x / L)` for every
+      `x ∈ [0,L]`, where `w_n` are the cosine coefficients of `w`.
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2-has-weak-deriv
+    status: experimental
+    note: '`H²(0,L) ⊆ W^{1,1}(0,L)`: the first weak derivative.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv2
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2-has-weak-deriv2
+    status: experimental
+    note: '`H²(0,L)`: the second weak derivative, as a `W^{1,1}` statement for `w₁`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-h2-summable-norm-cosine-coeff
+    status: reusable
+    note: 'Summable coefficients. For `w ∈ H²(0,L)` with Neumann data, the cosine coefficients are absolutely
+      summable: `{w_n} ∈ ℓ¹(ℕ₀)`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.NeumannTrace
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: definition
+    claim: neumann-cosine-lean/sobolev-h2-neumann-neumann-trace
+    status: experimental
+    note: 'The Neumann trace condition `w_x(0) = w_x(L) = 0`, stated on the continuous representative
+      of `w₁ = w_x`: some `V` continuous on `[0,L]` agrees with `w₁` a.e. on `(0,L)` and vanishes at both
+      endpoints.'
+  - source: null
+    lean: NeumannCosine.Sobolev.H2Neumann.cosineCoeff_congr_ae
+    module: NeumannCosine/Sobolev/H2Neumann.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-h2-neumann-cosine-coeff-congr-ae
+    status: experimental
+    note: The cosine coefficients only depend on the a.e. class on `(0,L)`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: definition
+    claim: neumann-cosine-lean/sobolev-weak-derivative-has-weak-deriv
+    status: experimental
+    note: '`g` is a weak derivative of `w` on `(0,L)` (both in `L¹(0,L)`): `∫₀ᴸ w φ'' = -∫₀ᴸ g φ` for
+      every `φ ∈ C_c^∞(0,L)`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-has-weak-deriv-ae-eq-primitive
+    status: reusable
+    note: '`W^{1,1}(0,L)` functions are absolutely continuous. If `g ∈ L¹(0,L)` is a weak derivative of
+      `w ∈ L¹(0,L)`, then for some constant `c`, `w(x) = c + ∫₀ˣ g` for a.e. `x ∈ (0,L)`; this representative
+      is absolutely continuous on `[0,L]` and has derivative `g(x)` at a.e. `x ∈ [0,L]`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: definition
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function
+    status: experimental
+    note: '`φ ∈ C_c^∞(0,L)`: smooth, compactly supported, with `tsupport φ ⊆ (0,L)`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function-continuous
+    status: experimental
+    note: A test function is continuous.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous_deriv
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function-continuous-deriv
+    status: experimental
+    note: The derivative `φ'` of a test function is continuous.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.integral_mul_eq
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function-integral-mul-eq
+    status: experimental
+    note: An integral over `ℝ` of `φ · F` equals the integral over `(0,L)`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.absolutelyContinuousOnInterval_const_add
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-absolutely-continuous-on-interval-const-add
+    status: experimental
+    note: Constant shift of an absolutely continuous function.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-ae-eq-const-of-integral-mul-deriv-eq-zero
+    status: reusable
+    note: du Bois-Reymond lemma. If `h ∈ L¹(0,L)` and `∫₀ᴸ h φ' = 0` for every `φ ∈ C_c^∞(0,L)`, then
+      `h` is a.e. equal to a constant on `(0,L)`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.eq_zero_of_notMem
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function-eq-zero-of-not-mem
+    status: experimental
+    note: A test function on `(0,L)` vanishes at every point outside `(0,L)`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.eqOn_of_ae_eq_continuousOn
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-eq-on-of-ae-eq-continuous-on
+    status: experimental
+    note: 'Uniqueness of the continuous representative: two functions continuous on `[0,L]` that agree
+      a.e. on `(0,L)` agree on all of `[0,L]`.'
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.exists_Icc_of_isCompact
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-exists-icc-of-is-compact
+    status: experimental
+    note: A compact subset of `(0,L)` lies in some `[a,b] ⊆ (0,L)`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.integral_congr_ae_Ioo
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-integral-congr-ae-ioo
+    status: experimental
+    note: Interval integrals over `[a,b]` only see the values on `(a,b)` up to null sets.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.intervalIntegrable_of_memLp
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-interval-integrable-of-mem-lp
+    status: experimental
+    note: On a bounded interval `L² ⊆ L¹`.
+  - source: null
+    lean: NeumannCosine.Sobolev.WeakDerivative.isTestFunction_primitive
+    module: NeumannCosine/Sobolev/WeakDerivative.lean
+    kind: theorem
+    claim: neumann-cosine-lean/sobolev-weak-derivative-is-test-function-primitive
+    status: experimental
+    note: The primitive of a smooth function supported in `[a,b] ⊆ (0,L)` with zero total integral is
+      a test function.
+  - source: null
+    lean: NeumannCosine.continuous_mode
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/continuous-mode
+    status: experimental
+    note: The Neumann mode x ↦ cos(kπx/L) is continuous.
+  - source: null
+    lean: NeumannCosine.cos_freq_mul
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/cos-freq-mul
+    status: experimental
+    note: The cosine with frequency `freq L k` is `cos (k π x / L)`.
+  - source: null
+    lean: NeumannCosine.cos_pow_three
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/cos-pow-three
+    status: experimental
+    note: The triple-angle identity cos³θ = (3 cos θ + cos 3θ)/4.
+  - source: null
+    lean: NeumannCosine.freq
+    module: NeumannCosine/Basic.lean
+    kind: definition
+    claim: neumann-cosine-lean/freq
+    status: experimental
+    note: The frequency `k π / L` of the `k`-th Neumann mode on `[0, L]`.
+  - source: null
+    lean: NeumannCosine.freq_mul_length
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/freq-mul-length
+    status: experimental
+    note: For L > 0 the frequency kπ/L times L equals kπ.
+  - source: null
+    lean: NeumannCosine.freq_nonneg
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/freq-nonneg
+    status: experimental
+    note: For L > 0 the frequency kπ/L is nonnegative.
+  - source: null
+    lean: NeumannCosine.integral_cos_const_mul
+    module: NeumannCosine/Basic.lean
+    kind: lemma
+    claim: neumann-cosine-lean/integral-cos-const-mul
+    status: experimental
+    note: For c ≠ 0, ∫₀ᴸ cos(cy) dy = sin(cL)/c.
+  - source: null
+    lean: NeumannCosine.integral_cos_int_mul_pi_div
+    module: NeumannCosine/Basic.lean
+    kind: lemma
+    claim: neumann-cosine-lean/integral-cos-int-mul-pi-div
+    status: reusable
+    note: '`∫₀ᴸ cos (j π y / L) dy` is `L` if `j = 0` and `0` otherwise, for `j ∈ ℤ`.'
+  - source: null
+    lean: NeumannCosine.integral_mode_mul_mode
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/integral-mode-mul-mode
+    status: reusable
+    note: Orthogonality of the Neumann modes and their Gram values.
+  - source: null
+    lean: NeumannCosine.mode
+    module: NeumannCosine/Basic.lean
+    kind: definition
+    claim: neumann-cosine-lean/mode
+    status: experimental
+    note: The Neumann mode `cos (k π x / L)` on `[0, L]`.
+  - source: null
+    lean: NeumannCosine.mode_eq_cos_freq
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/mode-eq-cos-freq
+    status: experimental
+    note: The Neumann mode cos(kπx/L) equals cos(freq L k · x).
+  - source: null
+    lean: NeumannCosine.norm_mode_le_one
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/norm-mode-le-one
+    status: experimental
+    note: The Neumann mode cos(kπx/L) has norm at most one.
+  - source: null
+    lean: NeumannCosine.normalized_integral_mode_mul_self
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/normalized-integral-mode-mul-self
+    status: reusable
+    note: For `n ≥ 1`, `(2/L) ∫₀ᴸ cos_n cos_n = 1`.
+  - source: null
+    lean: NeumannCosine.normalized_integral_mode_pow_four
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/normalized-integral-mode-pow-four
+    status: reusable
+    note: For `n ≥ 1`, `(2/L) ∫₀ᴸ cos_n⁴ = 3/4`.
+  - source: null
+    lean: NeumannCosine.normalized_integral_mode_three_mul
+    module: NeumannCosine/Basic.lean
+    kind: theorem
+    claim: neumann-cosine-lean/normalized-integral-mode-three-mul
+    status: reusable
+    note: 'For `n ≥ 1`, the third harmonic is orthogonal to mode `n`: `(2/L) ∫₀ᴸ cos_{3n} cos_n = 0`.'
