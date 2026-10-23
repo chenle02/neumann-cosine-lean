@@ -3,6 +3,7 @@
 Neumann cosine series on an interval [0, L] and the discrete Neumann Laplacian, in Lean 4 with Mathlib.
 Lean v4.35.0, Mathlib v4.35.0. Namespace NeumannCosine. Apache-2.0. Author Le Chen.
 Repository: https://github.com/chenle02/neumann-cosine-lean
+Documentation site: https://chenle02.github.io/neumann-cosine-lean/
 
 The Lean declaration decides every hypothesis. Prose is not checked by Lean.
 A receipt under .lean-receipts/ covers only the commit it names.
