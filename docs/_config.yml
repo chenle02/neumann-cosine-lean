@@ -1,0 +1,12 @@
+title: "Neumann Cosine"
+description: "Neumann cosine series on an interval and the discrete Neumann Laplacian, formalized in Lean 4 with Mathlib."
+url: https://chenle02.github.io
+baseurl: /neumann-cosine-lean
+markdown: kramdown
+theme: null
+plugins: []
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

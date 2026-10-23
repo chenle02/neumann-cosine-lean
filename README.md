@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/assets/banner.svg" width="560" alt="The first three cosine modes on an interval, each with zero slope at both ends">
+
 # Neumann Cosine
 
 Neumann cosine series on an interval $`[0,L]`$ and the discrete Neumann Laplacian: orthogonality, product integrals, summable coefficients and pointwise expansions under $`W^{2,1}`$ or $`H^2`$ Neumann data, and convergence of the discrete spectrum. Formalized in Lean 4 with Mathlib.
@@ -9,9 +11,10 @@ Neumann cosine series on an interval $`[0,L]`$ and the discrete Neumann Laplacia
 [![Release](https://img.shields.io/badge/release-v0.1.0-153e63)](https://github.com/chenle02/neumann-cosine-lean/releases/tag/v0.1.0)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23488175.svg)](https://doi.org/10.5281/zenodo.23488175)
 [![License](https://img.shields.io/badge/license-Apache--2.0-153e63)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-153e63)](https://chenle02.github.io/neumann-cosine-lean/)
 [![arXiv](https://img.shields.io/badge/arXiv-2610.20976-153e63)](https://arxiv.org/abs/2610.20976)
 
-[What is proved](docs/what-is-proved.md) · [Verification page](docs/verification.md) · [Build](#build-and-verify) · [Cite](CITATION.cff)
+[Documentation site](https://chenle02.github.io/neumann-cosine-lean/) · [What is proved](docs/what-is-proved.md) · [Verification page](docs/verification.md) · [Build](#build-and-verify) · [Cite](CITATION.cff)
 
 </div>
 
@@ -72,21 +75,7 @@ Each Lean statement is the authority; read its hypotheses before you use it. The
 [verification page](docs/verification.md) shows each Lean statement beside its description; the same page is
 rendered in the verification section at the end of this README.
 
-| Module | Contents |
-|---|---|
-| `NeumannCosine.Basic` | The mode, its frequency, orthogonality and Gram values |
-| `NeumannCosine.Series.TermwiseIntegral` | Termwise integration of $`\ell^1`$ cosine series |
-| `NeumannCosine.Series.Products` | Products of $`\ell^1`$ cosine series, interchange with the integral, signed-index reindexing |
-| `NeumannCosine.KernelIntegrals` | Closed forms of integrals of products of three and four modes |
-| `NeumannCosine.ProductIdentities` | Integrals of products of two to four cosine series as constrained convolutions |
-| `NeumannCosine.Coefficients` | The class `NeumannW21`: $`O(k^{-2})`$ coefficients, summability, pointwise expansion |
-| `NeumannCosine.Sobolev.WeakDerivative` | Weak derivatives on $`(0,L)`$, du Bois-Reymond, absolutely continuous representative |
-| `NeumannCosine.Sobolev.H2Neumann` | $`H^2(0,L)`$ with Neumann trace lies in `NeumannW21` |
-| `NeumannCosine.DivergenceFormProjection` | $`\lvert\int_0^L(R_0+R_1')\cos(k\pi x/L)\,dx\rvert\le(L+k\pi)B`$ when $`\lvert R_0\rvert,\lvert R_1\rvert\le B`$ on $`[0,L]`$, $`R_0`$ is integrable, $`R_1`$ is absolutely continuous on $`[0,L]`$ (or continuous on $`[0,L]`$ and differentiable at every point of $`(0,L)`$ with integrable derivative), and $`R_1(0)=R_1(L)=0`$ |
-| `NeumannCosine.Discrete.Eigenvalues` | Discrete and continuum eigenvalues, $`\operatorname{sinc}^2`$ relation, convergence, lower bound |
-| `NeumannCosine.Discrete.Laplacian` | The reflected three-point stencil on `Fin (N + 1)`, its cosine eigenvectors and basis |
-| `NeumannCosine.Discrete.ModalMinimumTail` | One tail cutoff for all fine meshes, for a linearly coercive $`f`$ |
-| `NeumannCosine.Discrete.ModalMinimumLimit` | The discrete modal minimum converges to the continuum infimum |
+The module map is on the [modules page](docs/modules.md).
 
 > [!IMPORTANT]
 > **Not proved here.**
@@ -133,19 +122,7 @@ A sibling library is [scalar-pitchfork-lean](https://github.com/chenle02/scalar-
 ([doi:10.5281/zenodo.23498687](https://doi.org/10.5281/zenodo.23498687)), covering scalar branch
 and component-topology results under explicit assumptions. The two libraries are independent.
 
-**Related work.** These projects formalize nearby results. No code from them is used here.
-
-- [xiangyazi24/Shen_work](https://github.com/xiangyazi24/Shen_work) (Xiang Huang): a continuum Neumann cosine
-  layer on $`[0,1]`$ for $`C^2`$ functions, with coefficient decay and pointwise inversion at interior points.
-  The repository has no license.
-- The one-dimensional weak-derivative file of the Escauriaza–Seregin–Šverák formalization,
-  [scottnarmstrong/EscauriazaSereginSverak](https://github.com/scottnarmstrong/EscauriazaSereginSverak/blob/main/ESS/Witnesses/WeakDerivOneDim.lean),
-  also collected in [LeanPool](https://github.com/LeanPool/lean-pool/blob/main/LeanPool/EscauriazaSereginSverak/Witnesses/WeakDerivOneDim.lean).
-  It proves independently that a weak derivative gives an absolutely continuous primitive.
-- [TauCeti](https://github.com/TauCetiProject/TauCeti/blob/main/TauCeti/Analysis/Fourier/AbsolutelyContinuous.lean):
-  Fourier coefficients of absolutely continuous functions on the circle, by integration by parts.
-- [jinshanmu/Hatano-Nelson](https://github.com/jinshanmu/Hatano-Nelson): the sine eigenbasis and spectrum of
-  tridiagonal Toeplitz matrices, the Dirichlet analogue of item 10.
+**Related work**, and the libraries and tools this one builds on, are listed on the [acknowledgments page](docs/acknowledgments.md).
 
 ## Build and verify
 
@@ -172,23 +149,7 @@ then `lake update neumann-cosine-lean`, `lake exe cache get`, and `import Neuman
 from the table above). The trusted comparator statements are in
 [`NeumannCosine/Challenge.lean`](NeumannCosine/Challenge.lean); their `sorry` is intentional.
 
-**Built on.**
-
-- [Mathlib](https://github.com/leanprover-community/mathlib4): The mathlib Community, *The Lean Mathematical
-  Library*, CPP 2020, [doi:10.1145/3372885.3373824](https://doi.org/10.1145/3372885.3373824). Through Mathlib:
-  [Batteries](https://github.com/leanprover-community/batteries),
-  [Aesop](https://github.com/leanprover-community/aesop),
-  [Qq](https://github.com/leanprover-community/quote4),
-  [Plausible](https://github.com/leanprover-community/plausible),
-  [ProofWidgets4](https://github.com/leanprover-community/ProofWidgets4),
-  [LeanSearchClient](https://github.com/leanprover-community/LeanSearchClient),
-  [import-graph](https://github.com/leanprover-community/import-graph) and
-  [lean4-cli](https://github.com/leanprover/lean4-cli).
-- [Lean 4](https://github.com/leanprover/lean4), including `leanchecker` (replay of the compiled proofs) and
-  the `con-ron` kernel checker shipped in the toolchain.
-- [comparator](https://github.com/leanprover/comparator) with
-  [lean4export](https://github.com/leanprover/lean4export) and the
-  [nanoda](https://github.com/robsimmons/nanoda_lib) kernel, for the statement comparison.
+**Built on** Mathlib, Lean 4 and comparator; the full list with citations is on the [acknowledgments page](docs/acknowledgments.md#built-on).
 
 ## Trust and axioms
 
@@ -212,6 +173,13 @@ Le Chen, Associate Professor, Department of Mathematics and Statistics, Auburn U
 The Lean code was developed with AI assistance under the author's direction. Lean compilation and an
 independent kernel comparison check the stated theorems only; AI assistance is not human mathematical
 review. Mathlib retains its own notices (see [NOTICE](NOTICE)).
+
+## Full verification record
+
+The section below is generated by lean-pkg from `coverage.yaml`, `claims.yaml` and the committed receipts. It is easier to browse on the [documentation site](https://chenle02.github.io/neumann-cosine-lean/verification.html).
+
+<details>
+<summary><strong>Show the generated verification page</strong> (every result with its Lean statement, hypotheses and checks)</summary>
 
 <!-- lean-pkg:page:begin -->
 <!-- Generated by `lean-pkg page neumann-cosine-lean` from coverage.yaml, claims.yaml, the claims ledger and the receipts committed under .lean-receipts/. Do not edit between the markers: change the data and run `lean-pkg page neumann-cosine-lean --write`. -->
@@ -1060,3 +1028,5 @@ Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([d
 This work was completed in part with resources provided by the [Auburn University Easley Cluster](https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
 
 <!-- lean-pkg:page:end -->
+
+</details>
