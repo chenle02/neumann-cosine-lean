@@ -22,7 +22,7 @@ permissions:
   attestations: write
 jobs:
   verify:
-    uses: lean-pkg/lean-pkg/.github/workflows/verify.yml@3d49f6de663f308980e78736903a057db54c4442
+    uses: lean-pkg/lean-pkg/.github/workflows/verify.yml@1bc5f1b9fc0194b3513143b1711becca915a9765
     with:
       verify-command: bash verify.sh   # called with the log path as its last argument
       package-dir: .
