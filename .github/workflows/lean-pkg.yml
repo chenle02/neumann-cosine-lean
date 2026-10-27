@@ -1,0 +1,29 @@
+# .github/workflows/lean-pkg.yml: verify this package on a GitHub-hosted runner and write a lower-tier receipt
+# (printed by `lean-pkg receipt ci --template`). lean-pkg's reusable verify.yml checks out the pushed commit,
+# installs elan, the Mathlib cache and the lean-pkg release it ships with, runs the verify command with a
+# self-sealed log, then `lean-pkg receipt ci`, signs the receipt and its log into a Sigstore bundle (an
+# attestation, level 3), and uploads the three as the artifact lean-pkg-receipt-<run>-<attempt>. It never pushes:
+# after a green run, on your machine,
+#
+#   lean-pkg receipt ci --collect RUN_ID          # download, check against your checkout, copy into .lean-receipts/
+#   git add .lean-receipts && git commit -m "receipt: GitHub Actions run RUN_ID"
+#
+# Pin `uses:` to a full 40-hex commit of a lean-pkg release, never a tag or branch: a ref that can move is not
+# corroborated. Only push and workflow_dispatch runs write a receipt.
+name: lean-pkg verify
+on:
+  push:
+    branches: [main]
+    paths-ignore: [".lean-receipts/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+jobs:
+  verify:
+    uses: lean-pkg/lean-pkg/.github/workflows/verify.yml@3d49f6de663f308980e78736903a057db54c4442
+    with:
+      verify-command: bash verify.sh   # called with the log path as its last argument
+      package-dir: .
+      comparator: true   # also run the comparator tier (proposal 0008, S5)
