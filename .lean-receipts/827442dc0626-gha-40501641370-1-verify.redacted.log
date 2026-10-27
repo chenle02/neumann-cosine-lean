@@ -1,0 +1,707 @@
+commit: 827442dc062694913ff430a82576f7f5ac86cba5
+lean-toolchain: leanprover/lean4:v4.35.0
+checker: verify.sh (lake build NeumannCosine.Solution NeumannCosine.HeadlineSolution NeumannCosine.Axioms; #print axioms)
+lean-pkg-build: begin
+⚠ [9047/9062] Built NeumannCosine.Discrete.Eigenvalues (6.3s)
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:35: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9048/9062] Built NeumannCosine.Basic (6.6s)
+warning: NeumannCosine/Basic.lean:97:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9049/9062] Built NeumannCosine.Sobolev.WeakDerivative (7.1s)
+✔ [9050/9062] Built NeumannCosine.Discrete.ModalMinimumTail (7.0s)
+✔ [9051/9062] Built NeumannCosine.DivergenceFormProjection (6.7s)
+✔ [9052/9062] Built NeumannCosine.Series.TermwiseIntegral (6.3s)
+⚠ [9053/9062] Built NeumannCosine.Discrete.Laplacian (8.1s)
+warning: NeumannCosine/Discrete/Laplacian.lean:132:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: NeumannCosine/Discrete/Laplacian.lean:162:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: NeumannCosine/Discrete/Laplacian.lean:111:49: Variable name `hnN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hnN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9054/9062] Built NeumannCosine.Discrete.ModalMinimumLimit (3.5s)
+warning: NeumannCosine/Discrete/ModalMinimumLimit.lean:104:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9055/9062] Built NeumannCosine.KernelIntegrals (7.3s)
+✔ [9056/9062] Built NeumannCosine.Series.Products (7.2s)
+✔ [9057/9062] Built NeumannCosine.ProductIdentities (3.0s)
+✔ [9058/9062] Built NeumannCosine.Coefficients (4.9s)
+✔ [9059/9062] Built NeumannCosine.Sobolev.H2Neumann (3.1s)
+✔ [9060/9062] Built NeumannCosine.HeadlineSolution (4.1s)
+⚠ [9061/9062] Built NeumannCosine.Solution (5.3s)
+warning: NeumannCosine/Solution.lean:407:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: NeumannCosine/Solution.lean:407:57: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NeumannCosine/Solution.lean:595:62: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: NeumannCosine/Solution.lean:595:62: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [9062/9062] Built NeumannCosine.Axioms (2.8s)
+info: NeumannCosine/Axioms.lean:33:0: 'NeumannCosine.Coefficients.NeumannW21' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:34:0: 'NeumannCosine.Coefficients.NeumannW21.of_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:35:0: 'NeumannCosine.Coefficients.abs_cosineCoeff_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:36:0: 'NeumannCosine.Coefficients.cos_cos_cos_cos_of_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:37:0: 'NeumannCosine.Coefficients.cos_cos_cos_of_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:38:0: 'NeumannCosine.Coefficients.cosineCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:39:0: 'NeumannCosine.Coefficients.cosineCoeff_eq_halfCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:40:0: 'NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:41:0: 'NeumannCosine.Coefficients.cosineCoeff_of_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:42:0: 'NeumannCosine.Coefficients.cosineCoeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:43:0: 'NeumannCosine.Coefficients.cosine_sine_sine_of_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:44:0: 'NeumannCosine.Coefficients.evenExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:45:0: 'NeumannCosine.Coefficients.evenPeriodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:46:0: 'NeumannCosine.Coefficients.evenPeriodic_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:47:0: 'NeumannCosine.Coefficients.fourierCoeff_evenPeriodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:48:0: 'NeumannCosine.Coefficients.halfCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:49:0: 'NeumannCosine.Coefficients.halfCoeff_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:50:0: 'NeumannCosine.Coefficients.hasSum_cosineCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:51:0: 'NeumannCosine.Coefficients.integral_mul_cos_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:52:0: 'NeumannCosine.Coefficients.summable_halfCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:53:0: 'NeumannCosine.Coefficients.summable_norm_cosineCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:54:0: 'NeumannCosine.Coefficients.tsum_cosineCoeff_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:55:0: 'NeumannCosine.Coefficients.two_cosines_two_sines_of_neumann' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:56:0: 'NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:57:0: 'NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_mem_Icc' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:58:0: 'NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:59:0: 'NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:60:0: 'NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:61:0: 'NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:62:0: 'NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:63:0: 'NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:64:0: 'NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:65:0: 'NeumannCosine.Discrete.Eigenvalues.exists_forall_le_of_tendsto_atTop' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:66:0: 'NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:67:0: 'NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:68:0: 'NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_succ_tendsto_atTop' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:69:0: 'NeumannCosine.Discrete.Laplacian.Grid' does not depend on any axioms
+info: NeumannCosine/Axioms.lean:70:0: 'NeumannCosine.Discrete.Laplacian.GridFunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:71:0: 'NeumannCosine.Discrete.Laplacian.cos_reflected_right_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:72:0: 'NeumannCosine.Discrete.Laplacian.cos_step_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:73:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:74:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:75:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:76:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineMode_hasEigenvector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:77:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineMode_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:78:0: 'NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:79:0: 'NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:80:0: 'NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:81:0: 'NeumannCosine.Discrete.Laplacian.meshWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:82:0: 'NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:83:0: 'NeumannCosine.Discrete.Laplacian.reflectedNegLaplacianApply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:84:0: 'NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:85:0: 'NeumannCosine.Discrete.Laplacian.reflectedNext' depends on axioms: [propext, Quot.sound]
+info: NeumannCosine/Axioms.lean:86:0: 'NeumannCosine.Discrete.Laplacian.reflectedPrev' depends on axioms: [propext, Quot.sound]
+info: NeumannCosine/Axioms.lean:87:0: 'NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:88:0: 'NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf_eq_finset_inf'' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:89:0: 'NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:90:0: 'NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:91:0: 'NeumannCosine.Discrete.ModalMinimumLimit.positiveModes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:92:0: 'NeumannCosine.Discrete.ModalMinimumLimit.positiveModes_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:93:0: 'NeumannCosine.Discrete.ModalMinimumTail.comp_discreteNeumannEigenvalue_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:94:0: 'NeumannCosine.Discrete.ModalMinimumTail.exists_quadratic_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:95:0: 'NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_continuum_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:96:0: 'NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_discrete_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:97:0: 'NeumannCosine.Discrete.ModalMinimumTail.finset_inf'_eq_of_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:98:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_add_mul_cos_le_of_ibp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:99:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_le_of_abs_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:100:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:101:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:102:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_example' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:103:0: 'NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:104:0: 'NeumannCosine.DivergenceFormProjection.integral_deriv_mul_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:105:0: 'NeumannCosine.KernelIntegrals.continuous_intMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:106:0: 'NeumannCosine.KernelIntegrals.cos_cos_cos_cos_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:107:0: 'NeumannCosine.KernelIntegrals.cos_cos_cos_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:108:0: 'NeumannCosine.KernelIntegrals.cos_cos_sin_sin_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:109:0: 'NeumannCosine.KernelIntegrals.cos_sin_sin_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:110:0: 'NeumannCosine.KernelIntegrals.indicatorR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:111:0: 'NeumannCosine.KernelIntegrals.intMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:112:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:113:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:114:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_signed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:115:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_zero_mode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:116:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:117:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_cos_zero_mode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:118:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:119:0: 'NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin_signed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:120:0: 'NeumannCosine.KernelIntegrals.integral_cos_sin_sin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:121:0: 'NeumannCosine.KernelIntegrals.integral_cos_sin_sin_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:122:0: 'NeumannCosine.KernelIntegrals.integral_cos_sin_sin_zero_mode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:123:0: 'NeumannCosine.KernelIntegrals.integral_eight_intMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:124:0: 'NeumannCosine.KernelIntegrals.integral_four_intMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:125:0: 'NeumannCosine.KernelIntegrals.integral_intMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:126:0: 'NeumannCosine.KernelIntegrals.sinMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:127:0: 'NeumannCosine.ProductIdentities.cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:128:0: 'NeumannCosine.ProductIdentities.cos_cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:129:0: 'NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:130:0: 'NeumannCosine.ProductIdentities.cos_cos_cos_lp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:131:0: 'NeumannCosine.ProductIdentities.cosine_sine_sine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:132:0: 'NeumannCosine.ProductIdentities.cosine_sine_sine_lp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:133:0: 'NeumannCosine.ProductIdentities.kernel_cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:134:0: 'NeumannCosine.ProductIdentities.kernel_cos_cos_cos_cos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:135:0: 'NeumannCosine.ProductIdentities.kernel_cos_cos_sin_sin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:136:0: 'NeumannCosine.ProductIdentities.kernel_cos_sin_sin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:137:0: 'NeumannCosine.ProductIdentities.two_cosines_two_sines' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:138:0: 'NeumannCosine.ProductIdentities.two_cosines_two_sines_lp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:139:0: 'NeumannCosine.Series.Products.continuous_cos_phase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:140:0: 'NeumannCosine.Series.Products.continuous_sin_phase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:141:0: 'NeumannCosine.Series.Products.cos_cos_cos_cos_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:142:0: 'NeumannCosine.Series.Products.cos_cos_cos_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:143:0: 'NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:144:0: 'NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries_mul_cosineSeries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:145:0: 'NeumannCosine.Series.Products.cosine_sine_sine_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:146:0: 'NeumannCosine.Series.Products.hasSum_integral_tsum_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:147:0: 'NeumannCosine.Series.Products.hasSum_integral_tsum_mul_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:148:0: 'NeumannCosine.Series.Products.hasSum_mul_ite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:149:0: 'NeumannCosine.Series.Products.hasSum_mul_ite_int_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:150:0: 'NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:151:0: 'NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_of_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:152:0: 'NeumannCosine.Series.Products.hasSum_triple_ite_add_add_eq_neg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:153:0: 'NeumannCosine.Series.Products.norm_cos_phase_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:154:0: 'NeumannCosine.Series.Products.norm_cos_phase_mul_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:155:0: 'NeumannCosine.Series.Products.norm_sin_mul_sin_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:156:0: 'NeumannCosine.Series.Products.norm_sin_phase_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:157:0: 'NeumannCosine.Series.Products.summable_norm_mul_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:158:0: 'NeumannCosine.Series.Products.summable_norm_of_lp_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:159:0: 'NeumannCosine.Series.Products.tsum_mul_tsum_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:160:0: 'NeumannCosine.Series.Products.two_cosines_two_sines_of_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:161:0: 'NeumannCosine.Series.TermwiseIntegral.TripleIndex' does not depend on any axioms
+info: NeumannCosine/Axioms.lean:162:0: 'NeumannCosine.Series.TermwiseIntegral.boundedPhaseTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:163:0: 'NeumannCosine.Series.TermwiseIntegral.continuous_pairMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:164:0: 'NeumannCosine.Series.TermwiseIntegral.continuous_tripleMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:165:0: 'NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_boundedPhase' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:166:0: 'NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:167:0: 'NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosinePair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:168:0: 'NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosineTriple' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:169:0: 'NeumannCosine.Series.TermwiseIntegral.norm_pairMode_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:170:0: 'NeumannCosine.Series.TermwiseIntegral.norm_tripleMode_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:171:0: 'NeumannCosine.Series.TermwiseIntegral.pairMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:172:0: 'NeumannCosine.Series.TermwiseIntegral.summable_boundedPhaseTerm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:173:0: 'NeumannCosine.Series.TermwiseIntegral.summable_norm_pairCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:174:0: 'NeumannCosine.Series.TermwiseIntegral.summable_norm_tripleCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:175:0: 'NeumannCosine.Series.TermwiseIntegral.tripleCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:176:0: 'NeumannCosine.Series.TermwiseIntegral.tripleMode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:177:0: 'NeumannCosine.Sobolev.H2Neumann.H2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:178:0: 'NeumannCosine.Sobolev.H2Neumann.H2.exists_neumannW21' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:179:0: 'NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:180:0: 'NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:181:0: 'NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:182:0: 'NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:183:0: 'NeumannCosine.Sobolev.H2Neumann.NeumannTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:184:0: 'NeumannCosine.Sobolev.H2Neumann.cosineCoeff_congr_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:185:0: 'NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:186:0: 'NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:187:0: 'NeumannCosine.Sobolev.WeakDerivative.IsTestFunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:188:0: 'NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.eq_zero_of_notMem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:189:0: 'NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:190:0: 'NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:191:0: 'NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.integral_mul_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:192:0: 'NeumannCosine.Sobolev.WeakDerivative.absolutelyContinuousOnInterval_const_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:193:0: 'NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:194:0: 'NeumannCosine.Sobolev.WeakDerivative.eqOn_of_ae_eq_continuousOn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:195:0: 'NeumannCosine.Sobolev.WeakDerivative.exists_Icc_of_isCompact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:196:0: 'NeumannCosine.Sobolev.WeakDerivative.integral_congr_ae_Ioo' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:197:0: 'NeumannCosine.Sobolev.WeakDerivative.intervalIntegrable_of_memLp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:198:0: 'NeumannCosine.Sobolev.WeakDerivative.isTestFunction_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:199:0: 'NeumannCosine.continuous_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:200:0: 'NeumannCosine.cos_freq_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:201:0: 'NeumannCosine.cos_pow_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:202:0: 'NeumannCosine.freq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:203:0: 'NeumannCosine.freq_mul_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:204:0: 'NeumannCosine.freq_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:205:0: 'NeumannCosine.integral_cos_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:206:0: 'NeumannCosine.integral_cos_int_mul_pi_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:207:0: 'NeumannCosine.integral_mode_mul_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:208:0: 'NeumannCosine.mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:209:0: 'NeumannCosine.mode_eq_cos_freq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:210:0: 'NeumannCosine.norm_mode_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:211:0: 'NeumannCosine.normalized_integral_mode_mul_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:212:0: 'NeumannCosine.normalized_integral_mode_pow_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:213:0: 'NeumannCosine.normalized_integral_mode_three_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:217:0: 'NeumannCosineAudit.NeumannCosine.integral_mode_mul_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:218:0: 'NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:219:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:220:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:221:0: 'NeumannCosineAudit.NeumannCosine.Coefficients.summable_norm_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:222:0: 'NeumannCosineAudit.NeumannCosine.Coefficients.hasSum_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:223:0: 'NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:224:0: 'NeumannCosineAudit.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:225:0: 'NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:226:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:227:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:228:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:229:0: 'NeumannCosineAudit.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:230:0: 'NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:231:0: 'NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:232:0: 'NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:233:0: 'NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:234:0: 'NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:235:0: 'NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:236:0: 'NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:237:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:238:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:239:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:240:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:241:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:242:0: 'NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:243:0: 'NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:244:0: 'NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:245:0: 'NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:246:0: 'NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:247:0: 'NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:248:0: 'NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:249:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:250:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:251:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:252:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:253:0: 'NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:254:0: 'NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: NeumannCosine/Axioms.lean:255:0: 'NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:256:0: 'NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:257:0: 'NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:258:0: 'NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:259:0: 'NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:260:0: 'NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:261:0: 'NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:262:0: 'NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:263:0: 'NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:264:0: 'NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:265:0: 'NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: NeumannCosine/Axioms.lean:266:0: 'NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully (9062 jobs).
+lean-pkg-build: end
+claim-axioms: NeumannCosine.Coefficients.NeumannW21 Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.NeumannW21.of_contDiff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.abs_cosineCoeff_le Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cos_cos_cos_cos_of_neumann Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cos_cos_cos_of_neumann Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosineCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosineCoeff_eq_halfCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosineCoeff_of_ne_zero Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosineCoeff_zero Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.cosine_sine_sine_of_neumann Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.evenExt Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.evenPeriodic Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.evenPeriodic_apply Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.fourierCoeff_evenPeriodic Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.halfCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.halfCoeff_neg Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.hasSum_cosineCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.integral_mul_cos_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.summable_halfCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.summable_norm_cosineCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.tsum_cosineCoeff_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Coefficients.two_cosines_two_sines_of_neumann Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_mem_Icc Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_one_le Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteHalfAngle_tendsto_zero Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.exists_forall_le_of_tendsto_atTop Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_pos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Eigenvalues.neumannEigenvalue_succ_tendsto_atTop Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.Grid none
+claim-axioms: NeumannCosine.Discrete.Laplacian.GridFunction Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.cos_reflected_right_identity Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.cos_step_identity Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineBasis Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineMode_hasEigenvector Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineMode_ne_zero Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_injective Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.meshWidth Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacianApply Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.reflectedNext Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.Laplacian.reflectedPrev Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.continuumModalInf_eq_finset_inf' Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.positiveModes Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumLimit.positiveModes_nonempty Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumTail.comp_discreteNeumannEigenvalue_tendsto Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumTail.exists_quadratic_tail Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_continuum_tail Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumTail.exists_uniform_discrete_tail Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Discrete.ModalMinimumTail.finset_inf'_eq_of_tail Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_add_mul_cos_le_of_ibp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_le_of_abs_le Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_deriv Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_example Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.DivergenceFormProjection.integral_deriv_mul_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.continuous_intMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.cos_cos_cos_cos_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.cos_cos_cos_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.cos_cos_sin_sin_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.cos_sin_sin_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.indicatorR Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.intMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_signed Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos_zero_mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_signed Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_cos_zero_mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin_signed Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_sin_sin Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_sin_sin_signed Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_cos_sin_sin_zero_mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_eight_intMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_four_intMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.integral_intMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.KernelIntegrals.sinMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cos_cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cos_cos_cos_lp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cosine_sine_sine Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.cosine_sine_sine_lp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.kernel_cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.kernel_cos_cos_cos_cos Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.kernel_cos_cos_sin_sin Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.kernel_cos_sin_sin Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.two_cosines_two_sines Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.ProductIdentities.two_cosines_two_sines_lp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.continuous_cos_phase Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.continuous_sin_phase Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.cos_cos_cos_cos_of_kernel Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.cos_cos_cos_of_kernel Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.cosineSeries_mul_cosineSeries_mul_cosineSeries Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.cosine_sine_sine_of_kernel Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_integral_tsum_mul Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_integral_tsum_mul_tsum Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_mul_ite Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_mul_ite_int_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_neg Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_pair_ite_add_eq_of_neg Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.hasSum_triple_ite_add_add_eq_neg Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.norm_cos_phase_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.norm_cos_phase_mul_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.norm_sin_mul_sin_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.norm_sin_phase_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.summable_norm_mul_bounded Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.summable_norm_of_lp_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.tsum_mul_tsum_bounded Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.Products.two_cosines_two_sines_of_kernel Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.TripleIndex none
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.boundedPhaseTerm Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.continuous_pairMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.continuous_tripleMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_boundedPhase Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosinePair Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosineTriple Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.norm_pairMode_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.norm_tripleMode_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.pairMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.summable_boundedPhaseTerm Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.summable_norm_pairCoefficient Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.summable_norm_tripleCoefficient Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.tripleCoefficient Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Series.TermwiseIntegral.tripleMode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2 Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2.exists_neumannW21 Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2.hasWeakDeriv2 Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.NeumannTrace Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.H2Neumann.cosineCoeff_congr_ae Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.continuous_deriv Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.integral_mul_eq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.absolutelyContinuousOnInterval_const_add Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.IsTestFunction.eq_zero_of_notMem Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.eqOn_of_ae_eq_continuousOn Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.exists_Icc_of_isCompact Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.integral_congr_ae_Ioo Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.intervalIntegrable_of_memLp Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.Sobolev.WeakDerivative.isTestFunction_primitive Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.continuous_mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.cos_freq_mul Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.cos_pow_three Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.freq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.freq_mul_length Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.freq_nonneg Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.integral_cos_const_mul Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.integral_cos_int_mul_pi_div Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.integral_mode_mul_mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.mode Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.mode_eq_cos_freq Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.norm_mode_le_one Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.normalized_integral_mode_mul_self Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.normalized_integral_mode_pow_four Classical.choice,Quot.sound,propext
+claim-axioms: NeumannCosine.normalized_integral_mode_three_mul Classical.choice,Quot.sound,propext
+claim-axioms-done: 181
+sorry-count: 0
+axioms: Classical.choice,Quot.sound,propext
+generated-at: 2026-10-27T12:15:31Z
+verify-log-sha256: 6fd3245c47cd3b192520772ab318e92885059f643d9a3325a08b54b79b376976

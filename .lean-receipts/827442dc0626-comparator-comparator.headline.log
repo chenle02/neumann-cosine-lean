@@ -1,0 +1,79 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots NeumannCosine)
+== lake comparator (toolchain) comparator.headline.json
+Resolving dependencies
+Building NeumannCosine.HeadlineChallenge
+⚠ [9047/9047] Replayed NeumannCosine.HeadlineChallenge
+warning: NeumannCosine/HeadlineChallenge.lean:41:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:59:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:85:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:116:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:154:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:169:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:192:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:207:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:232:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:267:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:283:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:301:8: declaration uses `sorry`
+warning: NeumannCosine/HeadlineChallenge.lean:322:8: declaration uses `sorry`
+Build completed successfully (9047 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode, NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos, NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp, NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp, NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero, NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive, NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair, NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion, NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto, NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from NeumannCosine.HeadlineChallenge
+Building NeumannCosine.HeadlineSolution
+⚠ [9047/9059] Replayed NeumannCosine.Basic
+warning: NeumannCosine/Basic.lean:97:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9055/9059] Replayed NeumannCosine.Discrete.Eigenvalues
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NeumannCosine/Discrete/Eigenvalues.lean:152:35: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9056/9059] Replayed NeumannCosine.Discrete.Laplacian
+warning: NeumannCosine/Discrete/Laplacian.lean:132:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: NeumannCosine/Discrete/Laplacian.lean:162:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: NeumannCosine/Discrete/Laplacian.lean:111:49: Variable name `hnN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hnN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: NeumannCosine/Discrete/Laplacian.lean:150:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9058/9059] Replayed NeumannCosine.Discrete.ModalMinimumLimit
+warning: NeumannCosine/Discrete/ModalMinimumLimit.lean:104:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Build completed successfully (9059 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode, NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos, NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp, NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp, NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero, NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive, NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff, NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair, NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion, NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto, NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from NeumannCosine.HeadlineSolution
+Running con-ron kernel on solution
+con-ron: accepted 59236 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

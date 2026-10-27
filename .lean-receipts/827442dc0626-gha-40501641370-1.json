@@ -1,0 +1,59 @@
+{
+  "schema": "lower-receipt/1",
+  "commit": "827442dc062694913ff430a82576f7f5ac86cba5",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "1f593abf74993913300b17d5a6445788536498c7a41b2e6f538cf0871f7244b0",
+  "job_id": "gha-40501641370-1",
+  "checker": "verify.sh (lake build NeumannCosine.Solution NeumannCosine.HeadlineSolution NeumannCosine.Axioms; #print axioms)",
+  "generated_at": "2026-10-27T12:15:31Z",
+  "log_commit_bound": true,
+  "claim_axioms": {
+    "checked": 181,
+    "nonstandard": [],
+    "missing": []
+  },
+  "producer": {
+    "lean_pkg": "0.21.0",
+    "install": "installed",
+    "commit": null,
+    "dirty": null,
+    "sources_sha256": "8d65cfd1e42080d9a75a19e61927815c46948465419ffdc0dadd42b2cf97df7d",
+    "source_files": 93,
+    "python": "3.12.15",
+    "bytecode_tag": "cpython-312",
+    "bytecode_files": 78,
+    "bytecode_sha256": "ab0e9cc43ad528ad6439de6e7ece67c974886f35d40a5aa73054304268e92bb0",
+    "other_bytecode_files": 0
+  },
+  "ci": {
+    "provider": "github-actions",
+    "server_url": "https://github.com",
+    "repository": "chenle02/neumann-cosine-lean",
+    "repository_id": 1426027790,
+    "run_id": 40501641370,
+    "run_attempt": 1,
+    "job": "verify",
+    "event": "push",
+    "head_sha": "827442dc062694913ff430a82576f7f5ac86cba5",
+    "workflow_ref": "chenle02/neumann-cosine-lean/.github/workflows/lean-pkg.yml@refs/heads/main",
+    "workflow_sha": "827442dc062694913ff430a82576f7f5ac86cba5",
+    "workflow_file_sha256": "38fbc20d43bc82a15867f7027c24c48c973e29347d8f7e0eb25de80ccde4ead3",
+    "job_workflow": "lean-pkg/lean-pkg/.github/workflows/verify.yml@77570b705b60cc0d83870b018db7b5f8a1197f93",
+    "runner": {
+      "environment": "github-hosted",
+      "os": "Linux",
+      "arch": "X64",
+      "image": "ubuntu24",
+      "image_version": "20261023.334.3"
+    },
+    "verify_log_sha256": "1f593abf74993913300b17d5a6445788536498c7a41b2e6f538cf0871f7244b0",
+    "attestation": "827442dc0626-gha-40501641370-1.sigstore.json"
+  }
+}
