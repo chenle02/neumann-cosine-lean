@@ -993,8 +993,8 @@ The full account of what each check covers and what it takes on trust is lean-pk
 | `.lean-receipts/067501d7208c-comparator.json` | statement comparison | `067501d7208c` | 2026-10-19 | — | `5b8436270bc250f695edf2f13e97eefa848376bce725d83ed290b52106209321` |
 | `.lean-receipts/067501d7208c-slurm-5586731.json` | build | `067501d7208c` | 2026-10-19 | slurm-5586731 | `85cf8579bd4ebe1d53944c36ee5ab85da7d1353274cff8894ac42aace8bfbe51` |
 | `.lean-receipts/067501d7208c-slurm-5586732.json` | build | `067501d7208c` | 2026-10-19 | slurm-5586732 | `b85eeed33282a6628c3037f22267ef7eb15bcc381a181e5035c51c04e698736e` |
-| `.lean-receipts/827442dc0626-comparator.json` (used here) | statement comparison | `827442dc0626` | 2026-10-27 | — | `3deaef8cdf0d30d82b472e0f890fcaa2b7faf87125a24b1602eee3d7c3e0b831` |
-| `.lean-receipts/827442dc0626-gha-40501641370-1.json` (used here) | build | `827442dc0626` | 2026-10-27 | — | `eb1c8b8d0615ce338e12645752fd2bf39405cde3b829f8bccf4419fa1758489b` |
+| `.lean-receipts/827442dc0626-comparator.json` (used here) | statement comparison | `827442dc0626` | 2026-10-27 | gha-40501641370-1 | `3deaef8cdf0d30d82b472e0f890fcaa2b7faf87125a24b1602eee3d7c3e0b831` |
+| `.lean-receipts/827442dc0626-gha-40501641370-1.json` (used here) | build | `827442dc0626` | 2026-10-27 | gha-40501641370-1 | `eb1c8b8d0615ce338e12645752fd2bf39405cde3b829f8bccf4419fa1758489b` |
 | `.lean-receipts/d16a23572ff3-comparator.json` | statement comparison | `d16a23572ff3` | 2026-10-20 | — | `061fc14a7dd9bec9affd0f4627d886543072545f5246ef6e0806e89954a76414` |
 | `.lean-receipts/d16a23572ff3-slurm-5587231.json` | build | `d16a23572ff3` | 2026-10-20 | slurm-5587231 | `f614ce7a071d6417e8c6b59fcf5a9aa4b284aecd4080326580364d67b14c0fdf` |
 
@@ -1029,6 +1029,7 @@ Released under `Apache-2.0`; see [LICENSE](LICENSE).
 
 Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).
 This work was completed in part with resources provided by the [Auburn University Easley Cluster](https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
+Verification ran on [GitHub Actions](https://docs.github.com/en/actions) hosted runners ([run 40501641370 attempt 1](https://github.com/chenle02/neumann-cosine-lean/actions/runs/40501641370/attempts/1)).
 
 <!-- lean-pkg:page:end -->
 

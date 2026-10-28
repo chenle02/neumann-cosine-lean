@@ -154,3 +154,6 @@ compute:
   jobs:
   - slurm-5586731
   - slurm-5586732
+- cluster: github-actions
+  jobs:
+  - gha-40501641370-1
