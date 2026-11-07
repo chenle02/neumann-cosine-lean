@@ -71,3 +71,18 @@ footer { border-top: 1px solid var(--rule); font-size: .9rem; color: var(--muted
 details.tex-source { margin: 0 0 1em; font-size: .85em; }
 details.tex-source > summary { opacity: .8; }
 mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+
+/* Narrow screens. An over-long token (a commit SHA, a dotted Lean name, a file-path link) breaks
+   instead of widening the page; ordinary words are untouched because they fit the column. */
+main { overflow-wrap: anywhere; }
+main pre, main pre code { overflow-wrap: normal; }
+/* Inside a table words stay whole (anywhere would split them, e.g. "Mo/dul/e"): the table scrolls. */
+td, th { overflow-wrap: normal; }
+/* MathJax 3 does not break formulas. math.js marks a formula wider than its column with .mjx-wide; only
+   that formula scrolls inside its own box. The vertical padding keeps superscripts and fraction bars clear
+   of the box edge. Formulas that fit are left as MathJax renders them. */
+mjx-container.mjx-wide { position: relative; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 0.4em 0; }
+mjx-container.mjx-wide:not([display="true"]) { display: inline-block; vertical-align: middle; }
+/* MathJax's hidden screen-reader copy is absolutely positioned and laid out unwrapped; capped, it no
+   longer widens the page past an inline formula near the end of a line. */
+mjx-assistive-mml { max-width: 100%; }

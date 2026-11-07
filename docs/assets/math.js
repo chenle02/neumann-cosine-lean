@@ -52,6 +52,15 @@
       code.parentNode.replaceChild(document.createTextNode("\\(" + code.textContent + "\\)"), code);
     });
   }
+  // A formula wider than its column gets .mjx-wide (site.css), so it scrolls inside its own box
+  // instead of widening the whole page on a narrow screen (same rule as growth-rates-lean).
+  function markWideMath() {
+    document.querySelectorAll("mjx-container").forEach(function (m) {
+      m.classList.remove("mjx-wide");
+      var col = m.parentElement && m.parentElement.closest("p, li, td, th, dd, blockquote, section, article, main, div");
+      if (col && m.getBoundingClientRect().width > col.clientWidth + 1) m.classList.add("mjx-wide");
+    });
+  }
   function fallBackToSource() {
     document.querySelectorAll(".tex-statement").forEach(function (shown) {
       if (!shown.querySelector("mjx-merror")) return;
@@ -75,7 +84,12 @@
         convertGithubMath(document);
         convertTexBlocks(document);
         MathJax.startup.defaultReady();
-        MathJax.startup.promise.then(fallBackToSource);
+        MathJax.startup.promise.then(fallBackToSource).then(markWideMath);
+        var resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(markWideMath, 200);
+        });
       }
     }
   };
