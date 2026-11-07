@@ -49,7 +49,7 @@ For $`L>0`$ and $`m,n\in\mathbb N`$,
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.integral_mode_mul_mode` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L41): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -71,7 +71,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -105,7 +105,7 @@ with the index arithmetic in $`\mathbb Z`$.
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.KernelIntegrals.integral_cos_cos_cos_cos` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L59): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -135,7 +135,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -169,7 +169,7 @@ where $`c_m(x)=\cos(m\pi x/L)`$ and $`\sigma=(\sigma_1,\sigma_2,\sigma_3)`$ runs
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.cos_cos_cos_cos_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L85): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -210,7 +210,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -244,7 +244,7 @@ each sum over $`(i,j)\in\mathbb N^2`$ with the constraint in $`\mathbb Z`$.
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.ProductIdentities.two_cosines_two_sines_lp` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L116): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -284,7 +284,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -315,7 +315,7 @@ Let $`L>0`$ and let $`w`$ be absolutely continuous on $`[0,L]`$ with derivative 
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.summable_norm_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L154): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -341,7 +341,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -375,7 +375,7 @@ the series converging absolutely.
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Coefficients.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L169): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -402,7 +402,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -428,7 +428,7 @@ Let $`L>0`$ and $`h\in L^1(0,L)`$. If $`\int_0^L h\,\varphi'\,dx=0`$ for every $
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.ae_eq_const_of_integral_mul_deriv_eq_zero` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L192): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -451,7 +451,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -477,7 +477,7 @@ Let $`L>0`$ and $`w,g\in L^1(0,L)`$ with $`\int_0^Lw\,\varphi'\,dx=-\int_0^Lg\,\
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.WeakDerivative.HasWeakDeriv.ae_eq_primitive` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L207): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -502,7 +502,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -536,7 +536,7 @@ where $`w_k`$ are the cosine coefficients of $`w`$ (as above).
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Sobolev.H2Neumann.H2.hasSum_cosineCoeff` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L232): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -569,7 +569,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -603,7 +603,7 @@ these $`N+1`$ cosine vectors are linearly independent, and every real function o
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.reflectedNegLaplacian_cosine_eigenpair` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L267): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -620,7 +620,7 @@ theorem reflectedNegLaplacian_cosine_eigenpair (L : ℝ) (N n : ℕ) (hL : L ≠
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Laplacian.discreteCosineMode_exhaustion` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L283): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -635,7 +635,7 @@ theorem discreteCosineMode_exhaustion (L : ℝ) (N : ℕ) (hL : L ≠ 0) (hN : 0
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteCosineModes_linearIndependent` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L700): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -656,7 +656,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -687,7 +687,7 @@ For $`L>0`$ and fixed $`n\ge1`$,
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L301): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -709,7 +709,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -740,7 +740,7 @@ Let $`L>0`$, $`K>0`$ and $`f:\mathbb R\to\mathbb R`$ continuous at every $`x>0`$
 
 **Lean.** `NeumannCosineHeadline.NeumannCosine.Discrete.ModalMinimumLimit.discreteModalMin_tendsto` in [NeumannCosine/HeadlineChallenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/HeadlineChallenge.lean#L322): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -764,7 +764,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -795,7 +795,7 @@ For $`L>0`$ and $`j\in\mathbb Z`$, $`\int_0^L\cos\frac{j\pi y}{L}\,dy=L\,\mathbf
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.integral_cos_int_mul_pi_div` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L342): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -809,7 +809,7 @@ theorem integral_cos_int_mul_pi_div (L : ℝ) (hL : 0 < L) (j : ℤ) :
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_mul_self` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L351): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -822,7 +822,7 @@ theorem normalized_integral_mode_mul_self (L : ℝ) (n : ℕ) (hL : 0 < L) (hn :
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_three_mul` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L359): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -835,7 +835,7 @@ theorem normalized_integral_mode_three_mul (L : ℝ) (n : ℕ) (hL : 0 < L) (hn 
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.normalized_integral_mode_pow_four` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L367): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -856,7 +856,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -898,7 +898,7 @@ and for $`n,k\ge1`$, $`\int_0^Lc_ic_js_ns_k=\frac L8\big(\mathbf 1_{i-j=n-k}+\ma
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L380): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -916,7 +916,7 @@ theorem integral_cos_sin_sin (L : ℝ) (hL : 0 < L) (i n k : ℕ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L395): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -933,7 +933,7 @@ theorem integral_cos_cos_cos (L : ℝ) (hL : 0 < L) (i j k : ℕ) :
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.KernelIntegrals.integral_cos_cos_sin_sin` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L409): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -963,7 +963,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1005,7 +1005,7 @@ and the two-sine and three-series identities of the headline rows hold with summ
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L429): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1023,7 +1023,7 @@ theorem cosine_sine_sine (L : ℝ) (hL : 0 < L) (u : ℕ → ℝ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.two_cosines_two_sines` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L441): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1056,7 +1056,7 @@ theorem two_cosines_two_sines (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L468): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1077,7 +1077,7 @@ theorem cos_cos_cos (L : ℝ) (hL : 0 < L) (u v : ℕ → ℝ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_cos` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L483): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1111,7 +1111,7 @@ theorem cos_cos_cos_cos (L : ℝ) (hL : 0 < L) (u v w : ℕ → ℝ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cosine_sine_sine_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L511): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1129,7 +1129,7 @@ theorem cosine_sine_sine_lp (L : ℝ) (hL : 0 < L)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.ProductIdentities.cos_cos_cos_lp` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L523): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1158,7 +1158,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1192,7 +1192,7 @@ the series on the left converging.
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Series.TermwiseIntegral.hasSum_intervalIntegral_cosine` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L545): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1220,7 +1220,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1251,7 +1251,7 @@ w_k=-\Big(\frac{L}{k\pi}\Big)^2\frac2L\int_0^Lw''(x)\cos\frac{k\pi x}{L}\,dx,\qq
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.cosineCoeff_eq_neg_mul_secondDeriv` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L566): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1271,7 +1271,7 @@ theorem cosineCoeff_eq_neg_mul_secondDeriv (L : ℝ) (hL : 0 < L) {w w' : ℝ �
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Coefficients.abs_cosineCoeff_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L581): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1298,7 +1298,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1324,7 +1324,7 @@ Under the hypotheses of the $`H^2`$ row, $`\sum_{k\ge0}|w_k|<\infty`$.
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Sobolev.H2Neumann.H2.summable_norm_cosineCoeff` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L602): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1355,7 +1355,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1386,7 +1386,7 @@ Let $`L>0`$, $`k\in\mathbb N`$, $`R_0\in L^1(0,L)`$ and $`R_1`$ with $`R_1(0)=R_
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L628): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1402,7 +1402,7 @@ theorem abs_integral_source_add_deriv_mul_cos_le {L B : ℝ} (hL : 0 < L) (k : �
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.DivergenceFormProjection.abs_integral_source_add_deriv_mul_cos_le_of_absolutelyContinuous` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L640): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1425,7 +1425,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1451,7 +1451,7 @@ Let $`\lambda_n^N=\frac{4}{(L/N)^2}\sin^2\frac{n\pi}{2N}`$ and $`N\ge1`$. If $`L
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_eq_mul_sinc_sq` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L655): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1465,7 +1465,7 @@ theorem discreteNeumannEigenvalue_eq_mul_sinc_sq (L : ℝ) (n N : ℕ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_one_le` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L665): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1479,7 +1479,7 @@ theorem discreteNeumannEigenvalue_one_le (L : ℝ) (n N : ℕ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Eigenvalues.discreteNeumannEigenvalue_lower_bound` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L675): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1492,7 +1492,7 @@ theorem discreteNeumannEigenvalue_lower_bound (L : ℝ) (n N : ℕ)
 
 **Lean.** `NeumannCosineAudit.NeumannCosine.Discrete.Laplacian.discreteNeumannEigenvalue_lt_of_lt` in [NeumannCosine/Challenge.lean](https://github.com/chenle02/neumann-cosine-lean/blob/d16a23572ff3212856109dda2010668ed7adbf73/NeumannCosine/Challenge.lean#L689): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
-<details>
+<details markdown="1">
 <summary>Exact Lean statement (expand and copy)</summary>
 
 ```lean
@@ -1517,7 +1517,7 @@ Lean statement and source link above; this is not a claim to formalize a numbere
 **Compared with the reference.** The statement above retains this library's own hypotheses.
 No equivalence to a complete paper theorem, or discharge of application-specific premises, is claimed.
 
-<details>
+<details markdown="1">
 <summary>Sign-off and trust boundary</summary>
 
 | Check | Recorded status |
@@ -1542,7 +1542,7 @@ No equivalence to a complete paper theorem, or discharge of application-specific
 The newer paper companion has its own source and evidence. Its additions are not automatically
 part of this standalone library, and neither library establishes whole-paper verification.
 
-<details>
+<details markdown="1">
 <summary>Lean implementation notes</summary>
 
 The Lean statement, including every binder and hypothesis, controls the result. Definitions may be
